@@ -1,0 +1,17 @@
+:: Community3
+<<nobr>>
+<p class="fade-text">In this round, you visit the following households and share the information that you have about the bombings:</p>
+
+<<timed 2s t8n>>
+<ul>
+    <li>''Dr. Garfield Williams:'' The Engels</li>
+    <li>''Mr. Leonard Johnson:'' The Baileys</li>
+    <li>''Mr. Khan:'' The Hendersons</li>
+    <li>''Mrs. Khan:'' The Empeys</li>
+</ul>
+<<next 2s>>
+<p>Now you will return to the main Round 2 page to [[choose your assigned household.|SelectHousehold3]]</p>
+
+<</timed>>
+
+<</nobr>>

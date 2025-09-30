@@ -1,0 +1,178 @@
+:: StoryData
+{
+    "ifid": "7BB31A4A-9E10-48D9-A1CD-448A7E567A59",
+    "format": "SugarCube",
+    "format-version": "2.36.1",
+    "start": "Start"
+}
+
+:: StoryInit
+<<cacheaudio "game-theme" "./assets/audio/game-theme.mp3">>
+<<cacheaudio "opening-message" "./assets/audio/opening-message.mp3">>
+<<cacheaudio "second-message" "./assets/audio/second-message.mp3">>
+<<cacheaudio "pigeon12" "./assets/audio/pigeon12.mp3">>
+<<cacheaudio "pigeon34" "./assets/audio/pigeon34.mp3">>
+<<cacheaudio "kettle" "./assets/audio/kettle.mp3">>
+<<cacheaudio "fire" "./assets/audio/fire.mp3">>
+<<cacheaudio "shop-bell" "./assets/audio/shop-bell.mp3">>
+<<cacheaudio "church-bell" "./assets/audio/church-bell.mp3">>
+<<cacheaudio "bicycle-bell" "./assets/audio/bicycle-bell.mp3">>
+<<cacheaudio "motor-car" "./assets/audio/motor-car.mp3">>
+<<cacheaudio "streetcar-station" "./assets/audio/streetcar-station.mp3">>
+<<cacheaudio "pigeon-coo" "./assets/audio/pigeon-coo.mp3">>
+<<cacheaudio "westminster" "./assets/audio/westminster.mp3">>
+
+
+
+:: StoryTitle
+Do we take shelter?
+
+:: Start
+
+<div class="game-title" style="margin-bottom: 55px;">
+!Do we take shelter? 
+!!//Evaluating “high stakes” information//
+</div>
+
+<div class="ham-radio">
+    <img class="radio-knob" src="./assets/images/radio-knob.png" onclick="$('.radio-knob').addClass('radio-on'); $('.opening-link').removeClass('hidden-link'); document.getElementById('opening').play();">
+    <div class="backlight"></div>
+    <audio id="opening" src="./assets/audio/second-message.mp3"></audio>
+
+    <img class="radio-base" src="./assets/images/radio-base.png">
+</div>
+
+<div class="fade-text opening-link hidden-link">
+[[Proceed to Greenep's Tobacco and Sweet Shop|Greenep]]
+</div>
+
+:: Greenep
+<<nobr>>
+<<type 90ms>>\
+<span class="typewriter">3:00 p.m, Greenep's Tobacco and Sweet Shop.</span>
+\<</type>>
+
+<div class="bike">
+  <div class="part frame">
+    <div class="bar left-top"></div>
+    <div class="bar left-bottom"></div>
+    <div class="bar left"></div>
+    <div class="bar top"></div>
+    <div class="bar bottom"></div>
+    <div class="bar right"></div>
+  </div>
+  <div class="part saddle">
+    <div class="sit-here"></div>
+    <div class="saddlepen"></div>
+  </div>
+  <div class="part handlebar">
+    <div class="stem"></div>
+    <div class="connector"></div>
+    <div class="prehandle"></div>
+    <div class="handle"></div>
+  </div>
+  <div class="part pedals">
+    <div class="inside"></div>
+    <div class="outside"></div>
+    <div class="pedalstem front">
+      <div class="pedalbase front"></div>
+    </div>
+    <div class="pedalstem back">
+      <div class="pedalbase back"></div>
+    </div>
+  </div>
+  <div class="part wheel left">
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+  </div>
+  <div class="part wheel right">
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+  </div>
+  <div class="part axis left"></div>
+  <div class="part axis right"></div>
+</div>
+
+<<timed 4.5s>>
+    <<audio "shop-bell" volume 0.55 play>>
+<</timed>>
+
+<<timed 5s t8n>>
+<p>Sunset will be at 3:50 p.m. today and, as per Civil Defence regulations, everyone must comply with the regulations to mask their windows, skylights, and entrances to comply with blackout regulations 30 minutes before sunset: 3:20 p.m.</p>
+
+<p>Right after lunch, some household members went to the local shop, Greenep’s Tobacco and Sweet Shop, to buy what they need (basic supplies such as milk and tobacco) in case there is another raid tonight.  Plus, they want to confirm the information that they have and to gather any final information from their neighbours as well as air raid wardens or first aid workers who might also stop by.</p>
+
+<<next 3s>>
+<p>Now they have returned with whatever additional facts, anecdotes, and even rumours they have heard at the shop.</p>
+
+<p>More tea is brewing, and [[someone has made some scones.|SelectHousehold3]]</p>
+
+<</timed>>
+
+<</nobr>>
+
+:: SelectHousehold3
+<h1 class="fade-text" style="text-align:center;">Round 3</h1>
+Select your household.
+
+[[Gamemaster's Clock|Gamemaster3]]
+
+[[Household 1: The Hendersons|Hendersons3]]
+[[Household 2: The Empeys|Empeys3]]
+[[Household 3: The Engels|Engels3]]
+[[Household 4: The Sklars|Sklars3]]
+[[Household 5: The Baileys|Baileys3]]
+
+[[Community Members|Community3]]
+
+:: FinalDecisions
+<<nobr>>
+<p class="fade-text">Round 4: Each household has gathered (and mapped) all the information it can gather about last night’s air raid.</p>
+
+<<timed 3s t8n>>
+<p>Now it is time to do a final evaluation and decide on the household plan in the event of another air raid this evening: does everyone stay at home or go to the community air raid shelter in the Cheetham Hill Assembly Rooms on Cheetham Hill Rd?</p>
+
+<<next 3s>>
+<img class="divider" src="./assets/images/div-05.svg"/>
+
+<p>Look at your Warden’s Report Form/War Report Form:</p>
+<ul>
+    <li>Which information do you believe is authoritative and current?</li>
+    <li>Which information is the most biased and which is the least?</li>
+    <li>Which information should you all use to make your final decision?</li>
+</ul>
+
+<<next 2s>>
+<p>Once you’ve done your final household evaluation, make your final decision. Be prepared to [[share your decision with the other households.|FinalCredits]]</p>
+<</timed>>
+<</nobr>>
+
+:: FinalCredits
+<<nobr>>
+<<audio "game-theme" volume 0 fadeoverto 7 0.75>>
+
+<div class="fade-text">
+    <h1>Credits</h1>
+
+    <p>Game design by Martha Attridge Bufton (Carleton University), based on //Making history: The breakup// by Nick Proctor (Simpson College) and adaptation by Aaron Cowan (Slippery Rock University)</p>
+
+    <p>Web design by Chantal Brousseau and Alesya Moshchenskaya, Carleton University.</p>
+
+    <p>Music by Diego Guzman.</p>
+
+    <p>Voice work by Sean Bufton and Linnet Whiston.</p>
+</div>
+
+<</nobr>>

@@ -1,0 +1,190 @@
+:: Gamemaster1
+<<nobr>>
+<<set _seconds to 1500>>
+<div id="countdown">
+    <h1 style="font-size:15em;margin:0px;">25:00</h1>
+</div>
+<<set _running to false>>
+<<set _button_name to "Play">>
+<div id="toggleClock">
+	<<button _button_name>>
+
+		<<set _running to !_running>>
+		<<if _button_name is "Pause">>
+			<<set _button_name to "Play">>
+		<<else>>
+			<<set _button_name to "Pause">>
+		<</if>>
+		<<script>>$("#toggleClock .macro-button")[0].textContent = window.SugarCube.State.temporary.button_name;<</script>>
+	<</button>>
+	<<button "Skip >" Debrief1>><</button>>
+</div>
+
+<<silently>>
+	<<repeat 1s>>
+		<<if _running is true>>
+			<<set _seconds to _seconds - 1>>
+			<<if _seconds gt 0>>
+				<<set _min to Math.trunc(_seconds / 60) >>
+				<<set _sec to Math.trunc(_seconds % 60) >>
+				<<if String(_sec).length lt 2>>
+					<<set _sec to "0" + String(_sec) >>
+				<</if>>
+				<<replace "#countdown">><h1 style="font-size:15em;margin:0px;">_min:_sec</h1><</replace>>
+			<<else>>
+				<<replace "#countdown">><h1 style="font-size:10em;margin:0px;">Time's up!</h1><</replace>>
+				<<timed 10s>>
+				<<goto Debrief1>>
+				<</timed>>
+				<<stop>>
+			<</if>>
+		<</if>>
+	<</repeat>>
+<</silently>>
+
+/* <<timed 1500s>>
+    <<audio "westminster" play>>
+    <p class="fade-text" style="display:flex;justify-content:center;font-size:1.5em;">[[Proceed|LunchtimeReports]]</p>
+<</timed>> */
+<</nobr>>
+
+:: Gamemaster2
+<<nobr>>
+<<set _seconds to 900>>
+<p style="display:flex;justify-content:center;">Complete your Evidence Report.</p>
+<div id="countdown">
+    <h1 style="font-size:15em;margin:0px;">15:00</h1>
+</div>
+<<set _running to false>>
+<<set _button_name to "Play">>
+<div id="toggleClock">
+	<<button _button_name>>
+
+		<<set _running to !_running>>
+		<<if _button_name is "Pause">>
+			<<set _button_name to "Play">>
+		<<else>>
+			<<set _button_name to "Pause">>
+		<</if>>
+		<<script>>$("#toggleClock .macro-button")[0].textContent = window.SugarCube.State.temporary.button_name;<</script>>
+	<</button>>
+	<<button "Skip >" Gamemaster3>><</button>>
+</div>
+
+<<silently>>
+	<<repeat 1s>>
+		<<if _running is true>>
+			<<set _seconds to _seconds - 1>>
+			<<if _seconds gt 0>>
+				<<set _min to Math.trunc(_seconds / 60) >>
+				<<set _sec to Math.trunc(_seconds % 60) >>
+				<<if String(_sec).length lt 2>>
+					<<set _sec to "0" + String(_sec) >>
+				<</if>>
+				<<replace "#countdown">><h1 style="font-size:15em;margin:0px;">_min:_sec</h1><</replace>>
+			<<else>>
+				<<replace "#countdown">><h1 style="font-size:10em;margin:0px;">Time's up!</h1><</replace>>
+				<<timed 10s>>
+				<<goto Gamemaster3>>
+				<</timed>>
+				<<stop>>
+			<</if>>
+		<</if>>
+	<</repeat>>
+<</silently>>
+<</nobr>>
+
+:: Gamemaster3
+<<nobr>>
+<<set _seconds to 60>>
+<p style="display:flex;justify-content:center;">Roll the dice.</p>
+<div id="countdown">
+    <h1 style="font-size:15em;margin:0px;">1:00</h1>
+</div>
+<<set _running to false>>
+<<set _button_name to "Play">>
+<div id="toggleClock">
+	<<button _button_name>>
+
+		<<set _running to !_running>>
+		<<if _button_name is "Pause">>
+			<<set _button_name to "Play">>
+		<<else>>
+			<<set _button_name to "Pause">>
+		<</if>>
+		<<script>>$("#toggleClock .macro-button")[0].textContent = window.SugarCube.State.temporary.button_name;<</script>>
+	<</button>>
+	<<button "Skip >" Gamemaster4>><</button>>
+</div>
+
+<<silently>>
+	<<repeat 1s>>
+		<<if _running is true>>
+			<<set _seconds to _seconds - 1>>
+			<<if _seconds gt 0>>
+				<<set _min to Math.trunc(_seconds / 60) >>
+				<<set _sec to Math.trunc(_seconds % 60) >>
+				<<if String(_sec).length lt 2>>
+					<<set _sec to "0" + String(_sec) >>
+				<</if>>
+				<<replace "#countdown">><h1 style="font-size:15em;margin:0px;">_min:_sec</h1><</replace>>
+			<<else>>
+				<<replace "#countdown">><h1 style="font-size:10em;margin:0px;">Time's up!</h1><</replace>>
+				<<stop>>
+			<</if>>
+		<</if>>
+	<</repeat>>
+<</silently>>
+<</nobr>>
+
+:: Gamemaster4
+<<nobr>>
+<<set _seconds to 600>>
+<p id="secret-continue" style="display:flex;justify-content:center;">Where will you take shelter?</p>
+<div id="countdown">
+    <h1 style="font-size:15em;margin:0px;">10:00</h1>
+</div>
+<<set _running to false>>
+<<set _button_name to "Play">>
+<div id="toggleClock">
+	<<button _button_name>>
+
+		<<set _running to !_running>>
+		<<if _button_name is "Pause">>
+			<<set _button_name to "Play">>
+		<<else>>
+			<<set _button_name to "Pause">>
+		<</if>>
+		<<script>>$("#toggleClock .macro-button")[0].textContent = window.SugarCube.State.temporary.button_name;<</script>>
+	<</button>>
+	<<button "Skip >" AirDefence>><</button>>
+</div>
+
+<<silently>>
+	<<repeat 1s>>
+		<<if _running is true>>
+			<<set _seconds to _seconds - 1>>
+			<<if _seconds gt 0>>
+				<<set _min to Math.trunc(_seconds / 60) >>
+				<<set _sec to Math.trunc(_seconds % 60) >>
+				<<if String(_sec).length lt 2>>
+					<<set _sec to "0" + String(_sec) >>
+				<</if>>
+				<<replace "#countdown">><h1 style="font-size:15em;margin:0px;">_min:_sec</h1><</replace>>
+			<<else>>
+				<<replace "#countdown">><h1 style="font-size:10em;margin:0px;">Times up!</h1><</replace>>
+				<<timed 10s>>
+					<<replace "#secret-continue">>Where will you take shelter[[?|AirDefence]]<</replace>>
+				/* <<goto Debrief1>> */
+				<</timed>>
+				<<stop>>
+			<</if>>
+		<</if>>
+	<</repeat>>
+<</silently>>
+
+/* <<timed 1200s>>
+    <<audio "westminster" play>>
+    <p class="fade-text" style="display:flex;justify-content:center;font-size:1.5em;">[[Proceed|Greenep]]</p>
+<</timed>> */
+<</nobr>>

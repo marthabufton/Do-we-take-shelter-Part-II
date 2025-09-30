@@ -1,0 +1,31 @@
+:: Pigeons1
+<<nobr>>
+<<audio "pigeon-coo" volume 0.75 fadeoverto 7 0>>
+
+<p>[[< Return to main passage|Baileys2]]</p>
+
+<div class="pigeon">
+    <img class="pigeon-note" src="./assets/images/pigeon-note.png" onclick="document.getElementById('delivery').play();">
+    <div class="backlight-pigeon"></div>
+    <audio id="delivery" src="./assets/audio/pigeon12.mp3"></audio>
+
+    <img class="pigeon-base" src="./assets/images/pigeon-base.png">
+</div>
+
+<</nobr>>
+
+:: Pigeons2
+<<nobr>>
+<<audio "pigeon-coo" volume 0.75 fadeoverto 7 0>>
+
+<p>[[< Return to main passage|Baileys3]]</p>
+
+<div class="pigeon">
+    <img class="pigeon-note" src="./assets/images/pigeon-note.png" onclick="document.getElementById('delivery').play();">
+    <div class="backlight-pigeon"></div>
+    <audio id="delivery" src="./assets/audio/pigeon34.mp3"></audio>
+
+    <img class="pigeon-base" src="./assets/images/pigeon-base.png">
+</div>
+
+<</nobr>>

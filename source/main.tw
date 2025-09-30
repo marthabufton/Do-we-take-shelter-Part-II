@@ -1,0 +1,262 @@
+:: StoryData
+{
+    "ifid": "7BB31A4A-9E10-48D9-A1CD-448A7E567A59",
+    "format": "SugarCube",
+    "format-version": "2.36.1",
+    "start": "Start"
+}
+
+:: StoryInit
+<<cacheaudio "game-theme" "./assets/audio/game-theme.mp3">>
+<<cacheaudio "opening-message" "./assets/audio/opening-message.mp3">>
+<<cacheaudio "second-message" "./assets/audio/second-message.mp3">>
+<<cacheaudio "pigeon12" "./assets/audio/pigeon12.mp3">>
+<<cacheaudio "pigeon34" "./assets/audio/pigeon34.mp3">>
+<<cacheaudio "kettle" "./assets/audio/kettle.mp3">>
+<<cacheaudio "fire" "./assets/audio/fire.mp3">>
+<<cacheaudio "shop-bell" "./assets/audio/shop-bell.mp3">>
+<<cacheaudio "church-bell" "./assets/audio/church-bell.mp3">>
+<<cacheaudio "bicycle-bell" "./assets/audio/bicycle-bell.mp3">>
+<<cacheaudio "motor-car" "./assets/audio/motor-car.mp3">>
+<<cacheaudio "streetcar-station" "./assets/audio/streetcar-station.mp3">>
+<<cacheaudio "pigeon-coo" "./assets/audio/pigeon-coo.mp3">>
+<<cacheaudio "westminster" "./assets/audio/westminster.mp3">>
+<<cacheaudio "air-raid-bbc" "./assets/audio/bbc-air-raid.mp3">>
+
+
+
+:: StoryTitle
+Do we take shelter?
+
+:: Start
+
+<div class="game-title" style="margin-bottom: 55px;">
+!Do we take shelter?
+!!//Evaluating “high stakes” information//
+</div><<nobr>> /* Leave nobr on this line - removes <br> which conforms with WCAG 1.3.1 */
+
+<div class="ham-radio">
+    <img class="radio-knob" src="./assets/images/radio-knob.png" onclick="$('.radio-knob').addClass('radio-on'); $('.opening-link').removeClass('hidden-link'); document.getElementById('opening').play();">
+    <div class="backlight"></div>
+    <audio id="opening" src="./assets/audio/second-message.mp3"></audio>
+
+    <img class="radio-base" src="./assets/images/radio-base.png">
+</div>
+
+<div class="fade-text opening-link hidden-link">
+[[Proceed to Manchester England, afternoon of December 23, 1940|Greenep]]
+</div>
+<</nobr>>
+
+:: Greenep
+<<nobr>>
+  <h1>Round 3</h1>
+<<type 90ms>>\
+<span class="typewriter">3:00 p.m, Greenep's Tobacco and Sweet Shop</span>
+\<</type>>
+
+<div class="bike">
+  <div class="part frame">
+    <div class="bar left-top"></div>
+    <div class="bar left-bottom"></div>
+    <div class="bar left"></div>
+    <div class="bar top"></div>
+    <div class="bar bottom"></div>
+    <div class="bar right"></div>
+  </div>
+  <div class="part saddle">
+    <div class="sit-here"></div>
+    <div class="saddlepen"></div>
+  </div>
+  <div class="part handlebar">
+    <div class="stem"></div>
+    <div class="connector"></div>
+    <div class="prehandle"></div>
+    <div class="handle"></div>
+  </div>
+  <div class="part pedals">
+    <div class="inside"></div>
+    <div class="outside"></div>
+    <div class="pedalstem front">
+      <div class="pedalbase front"></div>
+    </div>
+    <div class="pedalstem back">
+      <div class="pedalbase back"></div>
+    </div>
+  </div>
+  <div class="part wheel left">
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+  </div>
+  <div class="part wheel right">
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+    <div class="spoke"></div>
+  </div>
+  <div class="part axis left"></div>
+  <div class="part axis right"></div>
+</div>
+
+<<timed 4.5s>>
+    <<audio "shop-bell" volume 0.55 play>>
+<</timed>>
+
+<<timed 5s t8n>>
+<p>Sunset will be at 3:50 p.m. today and, as per Civil Defence regulations, you must comply with the blackout regulations and mask your windows, skylights, and entrances 30 minutes before the sun goes down.</p>
+
+<<next 2s>>
+<p>Today, your blackout deadline is 3:20 p.m</p>
+
+<p>Right after lunch, some household members walked or biked to the local shop, Greenep’s Tobacco and Sweet Shop.</p>
+
+<p>Greenep’s is the place for essentials like tobacco, maybe one of today’s newspapers from the Manchester Evening News, and the neighbourhood scoops.</p>
+
+<<next 3s>>
+<p>Now they have returned with whatever additional facts, anecdotes, and even rumours they have heard at the shop.</p>
+
+<p>More tea is brewing, and [[someone has made some scones.|Hendersons3]]</p>
+
+<</timed>>
+
+<</nobr>>
+
+:: SelectHousehold3
+<h1 class="fade-text" style="text-align:center;">Round 3</h1>
+
+[[Continue|Hendersons3]]
+
+<div class="household-page">
+  <img style="width:450px;" src="./assets/images/scones.svg">
+</div>
+
+:: SelectHousehold4
+<h1 class="fade-text" style="text-align:center;">Round 4</h1>
+Listen to the final broadcast from Radio MAB.
+<div class="household-page">
+  <img style="width:650px;" src="./assets/images/radio-red.png">
+</div>
+[[Turn on your radio|FinalDecisions]]
+:: FinalDecisions
+<<nobr>>
+  <p id="panel1" class="fade-text" style="font-size:1.5em;text-align:center;padding-top:75px;padding-bottom:45px;"><b>Moderators, household and community members:</b> read your instructions in the gamer handbook carefully. Listen to more reporting from Radio MAB.</p>
+
+<div id="link1" style="display:flex;height:100vh;justify-content:center;align-self:flex-end;" onclick="$('#panel1').toggle(); $('#link1').toggle(); $('#panel2').toggle();">
+    <img class="tower-backlight" src="./assets/images/manchester-radio-tower.svg"/>
+</div>
+<div class="fade-text" id="panel2" style="display: none;">
+    <div class="fade-text notepad-container">
+        <div class="notepad">
+            <div class="top">
+                <div style="display:flex;align-items:center;justify-content:end;height:100%;">
+                    <img class="megaphone-backlight" src="./assets/images/megaphone.svg" onclick="document.getElementById('recording4').play();" tabindex="0"/>
+                    <audio id="recording4" src="./assets/audio/r4p5.mp3"></audio>
+                </div>
+            </div>
+            <div class="paper-container">
+                <div class="paper">
+                    Good afternoon.<br>
+                    <br>
+                    This is the final report from Radio MAB.<br>
+                    <br>
+                    Nightfall is upon us and you must decide where you will take shelter if the German air force attacks Manchester this evening.<br>
+                    <br>
+                    Do you stay at home or go to the community air raid shelter in the Cheetham Hill Assembly Rooms on Cheetham Hill Rd?<br>
+                    You have gathered all the information you can and hope you have found out the truth about last night’s air raid.<br>
+                    You have listened to your household and community members, people who you think have authority, knowledge, and expertise.<br>
+                    <br>
+                    Some of this information is accurate.<br>
+                    Some of this information you believe.<br>
+                    And some information you do not necessarily accept, maybe because you suspect it is misinformation or even disinformation.<br>
+                    <br>
+                    As always, you must look within and confront your own biases.<br>
+                    Do not accept information that just confirms your own beliefs.<br>
+                    <br>
+                    Rethink: how do you know what you believe?<br>
+                    <br>
+                    Revise your point of view if your understanding of the threats has changed.<br>
+                    <br>
+                    The stakes are high: you must decide together and carry on.<br>
+                    <br>
+                    Good night and good luck.<br>
+                    <br>
+                    <p class="paper-end" style="text-align:center;">[[Radio MAB signing off.|FinalInstructions]]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<</nobr>>
+
+:: FinalInstructions
+<<nobr>>
+<h1>3:25 p.m. … no time to lose.</h1>
+<<timed 2s t8n>>
+<p>The blackout is in effect.</p>
+
+<<next 3s>>
+<br>
+<p>Now you must consolidate your evidence and make your final evaluation of the information you have gathered.</p>
+<p>First, you have 15 minutes to complete your Evidence Report.</p>
+<p>Second, you have 1 minute to roll the dice one more time to either gain or lose points.</p>
+<p>Third, you have 10 minutes to make your final decision.</p>
+
+<<next 7s>>
+<br>
+<p>Get ready to evaluate and decide … [[the clock is ticking|Gamemaster2]] and the bombers may be on the way.</p>
+
+<</timed>>
+<</nobr>>
+
+:: AirDefence
+<<nobr>>
+<<audio "air-raid-bbc" volume 1 play>>
+<div class="plane-container">
+  <img class="plane" src="./assets/images/plane.svg">
+</div>
+<<timed 5s t8n>>
+  <div style="position: fixed;inset: 0;width: fit-content;height: fit-content;margin: auto;">
+    <p>[[Who will survive?|FinalCredits]]</p>
+  </div>
+<</timed>>
+<</nobr>>
+
+:: FinalCredits
+<<nobr>>
+<<audio "game-theme" volume 0 fadeoverto 7 0.75>>
+
+<section class="fade-text">
+    <div class="pulsating-light"></div>
+</section>
+
+<<for $i = 1;$i <= 100; $i++>>
+    <div class="circle-container">
+        <div class="circle"></div>
+    </div>
+<</for>>
+
+<div class="fade-text">
+    <h1>Credits</h1>
+
+    <p>Game design by Martha Attridge Bufton (Carleton University), based on //Making history: The breakup// by Nick Proctor (Simpson College) and adaptation by Aaron Cowan (Slippery Rock University). Special thanks to Lucinda Johnston, University of Alberta Library.</p>
+
+    <p>Web design by Chantal Brousseau, Roscoe Brubeck-Campbell and Alesya Moshchenskaya, Carleton University.</p>
+
+    <p>Music by Diego Guzman.</p>
+
+    <p>Voice work by Sean Bufton and Linnet Whiston.</p>
+
+    <<audio "air-raid-bbc" stop>>
+</div>
+
+<</nobr>>

@@ -1,0 +1,45 @@
+:: Engels3
+<<nobr>>
+<<audio "shop-bell" volume 0.55 play>>
+<p id="panel1" class="fade-text" style="font-size:1.5em;text-align:center;padding-top:75px;padding-bottom:45px;"><b>Moderators, household and community members:</b> read your instructions in the gamer handbook carefully. Listen to more reporting from Radio MAB. Your scones are getting cold.</p>
+
+<div id="link1" style="display:flex;height:100vh;justify-content:center;align-self:flex-end;" onclick="$('#panel1').toggle(); $('#link1').toggle(); $('#panel2').toggle();">
+    <img class="tower-backlight" src="./assets/images/manchester-radio-tower.svg"/>
+</div>
+<div class="fade-text" id="panel2" style="display: none;">
+    <div class="fade-text notepad-container">
+        <div class="notepad">
+            <div class="top">
+                <div style="display:flex;align-items:center;justify-content:end;height:100%;">
+                    <img class="megaphone-backlight" src="./assets/images/megaphone.svg" onclick="document.getElementById('recording4').play();"/>
+                    <audio id="recording4" src="./assets/audio/r3p4.mp3"></audio>
+                </div>
+            </div>
+            <div class="paper-container">
+                <div class="paper">
+                    This is Radio MAB, bringing you the latest "Do we take shelter?" bulletin.<br>
+                    <br>
+                    You have 20 minutes left to assess and decide where you will stay tonight.<br>
+                    <br>
+                    You must continue to answer these questions:<br>
+                    &ensp;&ensp;- Will there be another bombardment and, if so, when?<br>
+                    &ensp;&ensp;- Should you move back to the community shelter or stay in your own home another night?<br>
+                    <br>
+                    Information is still scarce but you are about to receive further news.<br>
+                    <br>
+                    Now household and community members pass on the neighbourhood scoops they heard at Greenep’s Tobacco and Sweet Shop.<br>
+                    Sometimes, folks share first-hand accounts, sometimes second-or third-hand accounts. <br>
+                    <br>
+                    But what is true and what is just gossip or rumour?<br>
+                    <br>
+                    The game master will signal the end of Round 3 and then you will share your evaluation with the other households.<br>
+                    <br>
+                    Drink you tea, be vigilante<br>
+                    <br>
+                    <p class="paper-end" style="text-align:center;">[[Filter out the rumours from the truth.|FinalDecisions]]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<</nobr>>
