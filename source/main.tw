@@ -22,6 +22,7 @@
 <<cacheaudio "pigeon-coo" "./assets/audio/pigeon-coo.mp3">>
 <<cacheaudio "westminster" "./assets/audio/westminster.mp3">>
 <<cacheaudio "air-raid-bbc" "./assets/audio/bbc-air-raid.mp3">>
+<<cacheaudio "clock-tick" "./assets/audio/clock-tick.mp3">>
 
 
 
@@ -200,6 +201,7 @@ Listen to the final broadcast from Radio MAB.
 
 :: FinalInstructions
 <<nobr>>
+<<audio "clock-tick" volume 0.15 loop play>>
 <h1>3:25 p.m. … no time to lose.</h1>
 <<timed 2s t8n>>
 <p>The blackout is in effect.</p>

@@ -47,7 +47,7 @@
 
 :: BaileysBreak
 <<nobr>>
-<<audio "pigeon-coo" volume 0.75 fadeoverto 5 0>>
+<<audio "pigeon-coo" volume 1 fadeoverto 5 0>>
 <p id="panel1" class="fade-text" style="font-size:1.5em;text-align:center;padding-top:75px;padding-bottom:45px;">Baileys take note: listen to your eyewitness account in the gamer handbook</p>
 <a data-passage="Gamemaster1" class="household-page">
     <img class="tower-backlight" style="height:65vh;" src="./assets/images/pigeon.svg"/>
