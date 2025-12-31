@@ -4876,7 +4876,7 @@ What do you know now?
         &lt;div class=&quot;notepad&quot;&gt;
             &lt;div class=&quot;top&quot;&gt;
                 &lt;div style=&quot;display:flex;align-items:center;justify-content:end;height:100%;&quot;&gt;
-                    &lt;img class=&quot;megaphone-backlight&quot; src=&quot;./assets/images/megaphone.svg&quot; onclick=&quot;document.getElementById(&#39;recording4&#39;).play();&quot; tabindex=&quot;0&quot;/&gt;
+                    &lt;img class=&quot;megaphone-backlight&quot; src=&quot;./assets/images/megaphone.svg&quot; onclick=&quot;const audio = document.getElementById(&#39;recording4&#39;); audio.volume = 0.3; audio.play();&quot; tabindex=&quot;0&quot;/&gt;
                     &lt;audio id=&quot;recording4&quot; src=&quot;./assets/audio/r3p4.mp3&quot;&gt;&lt;/audio&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
