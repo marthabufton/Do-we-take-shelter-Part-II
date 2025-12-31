@@ -133,7 +133,7 @@ Do we take shelter?
 <</nobr>>
 :: SelectHousehold4
 <h1 class="fade-text" style="text-align:center;">Round 4</h1>
-Listen to the final broadcast from Radio MAB.
+<p style="align-self:center;">Listen to the final broadcast from Radio MAB.</p>
 <div class="household-page">
   <img style="width:650px;" src="./assets/images/radio-red.png">
 </div>
