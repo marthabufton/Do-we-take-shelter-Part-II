@@ -1,0 +1,6 @@
+# Twine generated files
+format.js
+settings.json
+
+# MacOS generated files
+.DS_Store
