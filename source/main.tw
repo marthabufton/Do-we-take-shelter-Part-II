@@ -126,21 +126,11 @@ Do we take shelter?
 <<next 3s>>
 <p>Now they have returned with whatever additional facts, anecdotes, and even rumours they have heard at the shop.</p>
 
-<p>More tea is brewing, and [[someone has made some scones.|Hendersons3]]</p>
+<p>More tea is brewing, and [[someone has made some scones.|Shared3]]</p>
 
 <</timed>>
 
 <</nobr>>
-
-:: SelectHousehold3
-<h1 class="fade-text" style="text-align:center;">Round 3</h1>
-
-[[Continue|Hendersons3]]
-
-<div class="household-page">
-  <img style="width:450px;" src="./assets/images/scones.svg">
-</div>
-
 :: SelectHousehold4
 <h1 class="fade-text" style="text-align:center;">Round 4</h1>
 Listen to the final broadcast from Radio MAB.
