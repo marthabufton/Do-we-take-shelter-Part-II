@@ -1,10 +1,8 @@
-:: Debrief1
+:: Debrief3
 !Round 3 Debrief
 
-What do you know now?
-
-[[Continue|SelectHousehold4]]
-
-
-
+<div class="debrief-scones">
+<p>What do you know now?</p>
 <img style="width:250px;" src="./assets/images/scones.svg">
+[[Continue|SelectHousehold4]]
+</div>

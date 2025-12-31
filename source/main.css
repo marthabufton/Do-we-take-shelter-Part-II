@@ -4422,3 +4422,19 @@ a:hover {
     transform: translateX(103vw) translateY(103vh);
   }
 }
+
+
+#passage-debrief3{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.debrief-scones{
+  display: grid;
+  grid-column: 1;
+  justify-self: end;
+}
+
+.debrief-scones > *{
+  justify-self: center;
+}

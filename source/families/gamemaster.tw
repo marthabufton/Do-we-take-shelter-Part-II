@@ -17,7 +17,7 @@
 		<</if>>
 		<<script>>$("#toggleClock .macro-button")[0].textContent = window.SugarCube.State.temporary.button_name;<</script>>
 	<</button>>
-	<<button "Skip >" Debrief1>><</button>>
+	<<button "Skip >" Debrief3>><</button>>
 </div>
 
 <<silently>>
@@ -35,7 +35,7 @@
 				<<replace "#countdown">><h1 style="font-size:10em;margin:0px;">Time's up!</h1><</replace>>
 				<<audio "westminster" play>>
 				<<timed 21s>>
-				<<goto Debrief1>>
+				<<goto Debrief3>>
 				<</timed>>
 				<<stop>>
 			<</if>>

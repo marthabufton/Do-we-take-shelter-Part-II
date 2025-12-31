@@ -4522,6 +4522,22 @@ a:hover {
   to {
     transform: translateX(103vw) translateY(103vh);
   }
+}
+
+
+#passage-debrief3{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.debrief-scones{
+  display: grid;
+  grid-column: 1;
+  justify-self: end;
+}
+
+.debrief-scones > *{
+  justify-self: center;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "config.js" */
 Config.ui.stowBarInitially = true;
 </script><tw-passagedata pid="1" name="BaileysBreak" tags="" position="100,100" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -4530,15 +4546,13 @@ Config.ui.stowBarInitially = true;
 &lt;a data-passage=&quot;Gamemaster1&quot; class=&quot;household-page&quot;&gt;
     &lt;img class=&quot;tower-backlight&quot; style=&quot;height:65vh;&quot; src=&quot;./assets/images/pigeon.svg&quot;/&gt;
 &lt;/a&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Debrief1" tags="" position="225,100" size="100,100">!Round 3 Debrief
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Debrief3" tags="" position="225,100" size="100,100">!Round 3 Debrief
 
-What do you know now?
-
+&lt;div class=&quot;debrief-scones&quot;&gt;
+&lt;p&gt;What do you know now?&lt;/p&gt;
+&lt;img style=&quot;width:250px;&quot; src=&quot;./assets/images/scones.svg&quot;&gt;
 [[Continue|SelectHousehold4]]
-
-
-
-&lt;img style=&quot;width:250px;&quot; src=&quot;./assets/images/scones.svg&quot;&gt;</tw-passagedata><tw-passagedata pid="3" name="Gamemaster1" tags="" position="350,100" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Gamemaster1" tags="" position="350,100" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set _seconds to 1500&gt;&gt;
 &lt;div id=&quot;countdown&quot;&gt;
     &lt;h1 style=&quot;font-size:15em;margin:0px;&quot;&gt;25:00&lt;/h1&gt;
@@ -4556,7 +4570,7 @@ What do you know now?
 		&lt;&lt;/if&gt;&gt;
 		&lt;&lt;script&gt;&gt;$(&quot;#toggleClock .macro-button&quot;)[0].textContent = window.SugarCube.State.temporary.button_name;&lt;&lt;/script&gt;&gt;
 	&lt;&lt;/button&gt;&gt;
-	&lt;&lt;button &quot;Skip &gt;&quot; Debrief1&gt;&gt;&lt;&lt;/button&gt;&gt;
+	&lt;&lt;button &quot;Skip &gt;&quot; Debrief3&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 
 &lt;&lt;silently&gt;&gt;
@@ -4574,7 +4588,7 @@ What do you know now?
 				&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h1 style=&quot;font-size:10em;margin:0px;&quot;&gt;Time&#39;s up!&lt;/h1&gt;&lt;&lt;/replace&gt;&gt;
 				&lt;&lt;audio &quot;westminster&quot; play&gt;&gt;
 				&lt;&lt;timed 21s&gt;&gt;
-				&lt;&lt;goto Debrief1&gt;&gt;
+				&lt;&lt;goto Debrief3&gt;&gt;
 				&lt;&lt;/timed&gt;&gt;
 				&lt;&lt;stop&gt;&gt;
 			&lt;&lt;/if&gt;&gt;
