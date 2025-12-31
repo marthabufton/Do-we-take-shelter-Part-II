@@ -160,7 +160,7 @@ Listen to the final broadcast from Radio MAB.
         <div class="notepad">
             <div class="top">
                 <div style="display:flex;align-items:center;justify-content:end;height:100%;">
-                    <img class="megaphone-backlight" src="./assets/images/megaphone.svg" onclick="document.getElementById('recording4').play();" tabindex="0"/>
+                    <img class="megaphone-backlight" src="./assets/images/megaphone.svg" onclick="const audio = document.getElementById('recording4'); audio.volume = 0.3; audio.play();" tabindex="0"/>
                     <audio id="recording4" src="./assets/audio/r4p5.mp3"></audio>
                 </div>
             </div>

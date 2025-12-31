@@ -4816,7 +4816,7 @@ What do you know now?
 	&lt;&lt;/repeat&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Gamemaster4" tags="" position="1225,100" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set _seconds to 600&gt;&gt;
+&lt;&lt;set _seconds to 6&gt;&gt;
 &lt;p id=&quot;secret-continue&quot; style=&quot;display:flex;justify-content:center;&quot;&gt;Where will you take shelter?&lt;/p&gt;
 &lt;div id=&quot;countdown&quot;&gt;
     &lt;h1 style=&quot;font-size:15em;margin:0px;&quot;&gt;10:00&lt;/h1&gt;
@@ -4850,6 +4850,7 @@ What do you know now?
 				&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h1 style=&quot;font-size:15em;margin:0px;&quot;&gt;_min:_sec&lt;/h1&gt;&lt;&lt;/replace&gt;&gt;
 			&lt;&lt;else&gt;&gt;
 				&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h1 style=&quot;font-size:10em;margin:0px;&quot;&gt;Times up!&lt;/h1&gt;&lt;&lt;/replace&gt;&gt;
+				&lt;&lt;audio &quot;westminster&quot; play&gt;&gt;
 				&lt;&lt;timed 10s&gt;&gt;
 					&lt;&lt;replace &quot;#secret-continue&quot;&gt;&gt;Where will you take shelter[[?|AirDefence]]&lt;&lt;/replace&gt;&gt;
 				/* &lt;&lt;goto Debrief1&gt;&gt; */
@@ -5256,7 +5257,7 @@ Listen to the final broadcast from Radio MAB.
         &lt;div class=&quot;notepad&quot;&gt;
             &lt;div class=&quot;top&quot;&gt;
                 &lt;div style=&quot;display:flex;align-items:center;justify-content:end;height:100%;&quot;&gt;
-                    &lt;img class=&quot;megaphone-backlight&quot; src=&quot;./assets/images/megaphone.svg&quot; onclick=&quot;document.getElementById(&#39;recording4&#39;).play();&quot; tabindex=&quot;0&quot;/&gt;
+                    &lt;img class=&quot;megaphone-backlight&quot; src=&quot;./assets/images/megaphone.svg&quot; onclick=&quot;const audio = document.getElementById(&#39;recording4&#39;); audio.volume = 0.3; audio.play();&quot; tabindex=&quot;0&quot;/&gt;
                     &lt;audio id=&quot;recording4&quot; src=&quot;./assets/audio/r4p5.mp3&quot;&gt;&lt;/audio&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
