@@ -1,6 +1,6 @@
 :: Evidence3
 !Evidence Report (consolidate your information)
-Answer the Round 2 questions on your Evidence Report. Add up your Safety Points for this round.
+Answer the Round 3 questions on your Evidence Report. Add up your Safety Points for this round.
 <<nobr>>
 <<set _seconds to 300>>
 <div id="countdown" style="min-height:unset">
@@ -48,7 +48,7 @@ Answer the Round 2 questions on your Evidence Report. Add up your Safety Points 
 
 :: Evidence4
 !Evidence Report (consolidate your information)
-Answer the Round 2 questions on your Evidence Report. Add up your Safety Points for this round.
+Answer the Round 4 questions on your Evidence Report. Add up your Safety Points for this round.
 <<nobr>>
 <<audio "clock-tick" volume 0.15 fadeout>>
 <<set _seconds to 300>>
