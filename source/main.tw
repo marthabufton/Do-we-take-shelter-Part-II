@@ -23,6 +23,7 @@
 <<cacheaudio "westminster" "./assets/audio/westminster.mp3">>
 <<cacheaudio "air-raid-bbc" "./assets/audio/bbc-air-raid.mp3">>
 <<cacheaudio "clock-tick" "./assets/audio/clock-tick.mp3">>
+<<cacheaudio "air-raid-siren" "./assets/audio/air-raid-siren.mp3">>
 
 
 
@@ -199,19 +200,22 @@ Do we take shelter?
 <<next 3s>>
 <br>
 <p>Now you must consolidate your evidence and make your final evaluation of the information you have gathered.</p>
-<p>First, you have 15 minutes to complete your Evidence Report.</p>
+<p>First, you have 5 minutes to complete your Evidence Report. Answer the Round 4 questions on your Evidence Report. Add up your Safety Points for this round.</p>
 <p>Second, you have 1 minute to roll the dice one more time to either gain or lose points.</p>
 <p>Third, you have 10 minutes to make your final decision.</p>
 
 <<next 7s>>
 <br>
-<p>Get ready to evaluate and decide … [[the clock is ticking|Gamemaster2]] and the bombers may be on the way.</p>
+<p>Get ready to evaluate and decide … [[the clock is ticking|Evidence4]] and the bombers may be on the way.</p>
 
 <</timed>>
 <</nobr>>
 
 :: AirDefence
 <<nobr>>
+<<audio "air-raid-siren" volume 1 play>>
+<<timed 8s>>
+  <<audio "air-raid-siren" fadeout>>
 <<audio "air-raid-bbc" volume 1 play>>
 <div class="plane-container">
   <img class="plane" src="./assets/images/plane.svg">
@@ -220,6 +224,10 @@ Do we take shelter?
   <div style="position: fixed;inset: 0;width: fit-content;height: fit-content;margin: auto;">
     <p>[[Who will survive?|FinalCredits]]</p>
   </div>
+<</timed>>
+<<timed 35s>>
+  <<audio "air-raid-bbc" fadeout>>
+  <</timed>>
 <</timed>>
 <</nobr>>
 

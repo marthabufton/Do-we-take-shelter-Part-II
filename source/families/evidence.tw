@@ -1,0 +1,96 @@
+:: Evidence3
+!Evidence Report (consolidate your information)
+Answer the Round 2 questions on your Evidence Report. Add up your Safety Points for this round.
+<<nobr>>
+<<set _seconds to 300>>
+<div id="countdown" style="min-height:unset">
+    <h1 style="font-size:10em;margin:0px;">5:00</h1>
+</div>
+<<set _running to false>>
+<<set _button_name to "Play">>
+<div id="toggleClock">
+	<<button _button_name>>
+
+		<<set _running to !_running>>
+		<<if _button_name is "Pause">>
+			<<set _button_name to "Play">>
+		<<else>>
+			<<set _button_name to "Pause">>
+		<</if>>
+		<<script>>$("#toggleClock .macro-button")[0].textContent = window.SugarCube.State.temporary.button_name;<</script>>
+	<</button>>
+	<<button "Skip >" Debrief3>><</button>>
+</div>
+
+<<silently>>
+	<<repeat 1s>>
+		<<if _running is true>>
+			<<set _seconds to _seconds - 1>>
+			<<if _seconds gt 0>>
+				<<set _min to Math.trunc(_seconds / 60) >>
+				<<set _sec to Math.trunc(_seconds % 60) >>
+				<<if String(_sec).length lt 2>>
+					<<set _sec to "0" + String(_sec) >>
+				<</if>>
+				<<replace "#countdown">><h1 style="font-size:10em;margin:0px;">_min:_sec</h1><</replace>>
+			<<else>>
+				<<replace "#countdown">><h1 style="font-size:7em;margin:0px;">Time's up!</h1><</replace>>
+				/* <<toggleclass ".fade-text" "hide">> */
+				/* <<timed 10s>>
+				<<goto Debrief2>>
+				<</timed>> */
+				<<stop>>
+			<</if>>
+		<</if>>
+	<</repeat>>
+<</silently>>
+<</nobr>>
+
+:: Evidence4
+!Evidence Report (consolidate your information)
+Answer the Round 2 questions on your Evidence Report. Add up your Safety Points for this round.
+<<nobr>>
+<<audio "clock-tick" volume 0.15 fadeout>>
+<<set _seconds to 300>>
+<div id="countdown" style="min-height:unset">
+    <h1 style="font-size:10em;margin:0px;">5:00</h1>
+</div>
+<<set _running to false>>
+<<set _button_name to "Play">>
+<div id="toggleClock">
+	<<button _button_name>>
+
+		<<set _running to !_running>>
+		<<if _button_name is "Pause">>
+			<<set _button_name to "Play">>
+		<<else>>
+			<<set _button_name to "Pause">>
+		<</if>>
+		<<script>>$("#toggleClock .macro-button")[0].textContent = window.SugarCube.State.temporary.button_name;<</script>>
+	<</button>>
+	<<button "Skip >" Gamemaster4>><</button>>
+</div>
+
+<<silently>>
+	<<repeat 1s>>
+		<<if _running is true>>
+			<<set _seconds to _seconds - 1>>
+			<<if _seconds gt 0>>
+				<<set _min to Math.trunc(_seconds / 60) >>
+				<<set _sec to Math.trunc(_seconds % 60) >>
+				<<if String(_sec).length lt 2>>
+					<<set _sec to "0" + String(_sec) >>
+				<</if>>
+				<<replace "#countdown">><h1 style="font-size:10em;margin:0px;">_min:_sec</h1><</replace>>
+			<<else>>
+				<<replace "#countdown">><h1 style="font-size:7em;margin:0px;">Time's up!</h1><</replace>>
+				/* <<toggleclass ".fade-text" "hide">> */
+				/* <<timed 10s>>
+				<<goto Gamemaster4>>
+				<</timed>> */
+				<<stop>>
+			<</if>>
+		<</if>>
+	<</repeat>>
+<</silently>>
+<</nobr>>

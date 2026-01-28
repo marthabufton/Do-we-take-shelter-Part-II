@@ -4428,13 +4428,3 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
-
-.debrief-scones{
-  display: grid;
-  grid-column: 1;
-  justify-self: end;
-}
-
-.debrief-scones > *{
-  justify-self: center;
-}

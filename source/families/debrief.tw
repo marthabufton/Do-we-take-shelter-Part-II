@@ -1,7 +1,7 @@
 :: Debrief3
 !Round 3 Debrief
 
-<div class="debrief-scones">
+<div>
 <p>What do you know now?</p>
 <img style="width:250px;" src="./assets/images/scones.svg">
 [[Continue|SelectHousehold4]]
