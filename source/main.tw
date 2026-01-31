@@ -226,7 +226,7 @@ Do we take shelter?
     <p>[[Who will survive?|FinalCredits]]</p>
   </div>
 <</timed>>
-<<timed 35s>>
+<<timed 15s>>
   <<audio "air-raid-bbc" fadeout>>
   <</timed>>
 <</timed>>
@@ -259,5 +259,7 @@ Do we take shelter?
 
     <<audio "air-raid-bbc" stop>>
 </div>
-
+<<timed 25s>>
+  <<audio "game-theme" fadeout>>
+<</timed>>
 <</nobr>>
