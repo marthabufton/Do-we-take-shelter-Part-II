@@ -4428,3 +4428,10 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
+
+.right-dice{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 27vw;
+}

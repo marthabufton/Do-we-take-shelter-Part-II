@@ -4528,6 +4528,13 @@ a:hover {
 #passage-debrief3{
   display: grid;
   grid-template-columns: 1fr 2fr;
+}
+
+.right-dice{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 27vw;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "config.js" */
 Config.ui.stowBarInitially = true;
 </script><tw-passagedata pid="1" name="BaileysBreak" tags="" position="100,100" size="100,100">&lt;&lt;nobr&gt;&gt;
@@ -4543,7 +4550,8 @@ Config.ui.stowBarInitially = true;
 &lt;img style=&quot;width:250px;&quot; src=&quot;./assets/images/scones.svg&quot;&gt;
 [[Continue|SelectHousehold4]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Evidence3" tags="" position="350,100" size="100,100">!Evidence Report (consolidate your information)
-Answer the Round 2 questions on your Evidence Report. Add up your Safety Points for this round.
+Roll the die: Static or no static?
+Then, answer the Round 3 questions on your Evidence Report. Add up your Safety Points for this round.
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set _seconds to 300&gt;&gt;
 &lt;div id=&quot;countdown&quot; style=&quot;min-height:unset&quot;&gt;
@@ -4578,6 +4586,7 @@ Answer the Round 2 questions on your Evidence Report. Add up your Safety Points 
 				&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h1 style=&quot;font-size:10em;margin:0px;&quot;&gt;_min:_sec&lt;/h1&gt;&lt;&lt;/replace&gt;&gt;
 			&lt;&lt;else&gt;&gt;
 				&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h1 style=&quot;font-size:7em;margin:0px;&quot;&gt;Time&#39;s up!&lt;/h1&gt;&lt;&lt;/replace&gt;&gt;
+				&lt;&lt;audio &quot;westminster&quot; play&gt;&gt;
 				/* &lt;&lt;toggleclass &quot;.fade-text&quot; &quot;hide&quot;&gt;&gt; */
 				/* &lt;&lt;timed 10s&gt;&gt;
 				&lt;&lt;goto Debrief2&gt;&gt;
@@ -4588,7 +4597,7 @@ Answer the Round 2 questions on your Evidence Report. Add up your Safety Points 
 	&lt;&lt;/repeat&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Evidence4" tags="" position="475,100" size="100,100">!Evidence Report (consolidate your information)
-Answer the Round 2 questions on your Evidence Report. Add up your Safety Points for this round.
+Answer the Round 4 questions on your Evidence Report. Add up your Safety Points for this round.
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;audio &quot;clock-tick&quot; volume 0.15 fadeout&gt;&gt;
 &lt;&lt;set _seconds to 300&gt;&gt;
@@ -4624,6 +4633,7 @@ Answer the Round 2 questions on your Evidence Report. Add up your Safety Points 
 				&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h1 style=&quot;font-size:10em;margin:0px;&quot;&gt;_min:_sec&lt;/h1&gt;&lt;&lt;/replace&gt;&gt;
 			&lt;&lt;else&gt;&gt;
 				&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;&lt;h1 style=&quot;font-size:7em;margin:0px;&quot;&gt;Time&#39;s up!&lt;/h1&gt;&lt;&lt;/replace&gt;&gt;
+				&lt;&lt;audio &quot;westminster&quot; play&gt;&gt;
 				/* &lt;&lt;toggleclass &quot;.fade-text&quot; &quot;hide&quot;&gt;&gt; */
 				/* &lt;&lt;timed 10s&gt;&gt;
 				&lt;&lt;goto Gamemaster4&gt;&gt;
@@ -5040,6 +5050,7 @@ Answer the Round 2 questions on your Evidence Report. Add up your Safety Points 
 &lt;p&gt;Get ready to evaluate and decide … [[the clock is ticking|Evidence4]] and the bombers may be on the way.&lt;/p&gt;
 
 &lt;&lt;/timed&gt;&gt;
+&lt;img class=&quot;right-dice&quot; src=&quot;./assets/images/Dice_coloured_svg-14.svg&quot;/&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="AirDefence" tags="" position="725,225" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;audio &quot;air-raid-siren&quot; volume 1 play&gt;&gt;
 &lt;&lt;timed 8s&gt;&gt;
