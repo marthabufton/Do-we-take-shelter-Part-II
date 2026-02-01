@@ -1,6 +1,6 @@
 :: Evidence3
 !Evidence Report (consolidate your information)
-Roll the die: Static or no static?
+<p style="font-size:1.3em; margin:0">Roll the die: Static or no static?</p>
 Then, answer the Round 3 questions on your Evidence Report. Add up your Safety Points for this round.
 <<nobr>>
 <<set _seconds to 300>>

@@ -54,7 +54,7 @@ Do we take shelter?
 <<nobr>>
   <h1>Round 3</h1>
 <<type 90ms>>\
-<span class="typewriter">3:00 p.m, Greenep's Tobacco and Sweet Shop</span>
+<span class="typewriter">3:00 p.m., Greenep's Tobacco and Sweet Shop</span>
 \<</type>>
 
 <div class="bike">
@@ -223,7 +223,7 @@ Do we take shelter?
 </div>
 <<timed 5s t8n>>
   <div style="position: fixed;inset: 0;width: fit-content;height: fit-content;margin: auto;">
-    <p>[[Who will survive?|FinalCredits]]</p>
+    <p style="font-size:2em">[[Who will survive?|FinalCredits]]</p>
   </div>
 <</timed>>
 <<timed 15s>>
