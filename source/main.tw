@@ -127,11 +127,20 @@ Do we take shelter?
 <<next 3s>>
 <p>Now they have returned with whatever additional facts, anecdotes, and even rumours they have heard at the shop.</p>
 
-<p>More tea is brewing, and [[someone has made some scones.|Shared3]]</p>
+<p>More tea is brewing, and [[someone has made some scones.|SelectHousehold3]]</p>
 
 <</timed>>
 
 <</nobr>>
+
+:: SelectHousehold3
+<<audio "shop-bell" volume 0.55 play>>
+<h1 class="fade-text" style="text-align:center;">Round 3</h1>
+<p style="align-self:center;">Listen to the broadcast from Radio MAB.</p>
+<div class="household-page">
+  <img style="width:650px;" src="./assets/images/radio-red.png">
+</div>
+[[Turn on your radio|Shared3]]
 :: SelectHousehold4
 <h1 class="fade-text" style="text-align:center;">Round 4</h1>
 <p style="align-self:center;">Listen to the final broadcast from Radio MAB.</p>
@@ -211,6 +220,11 @@ Do we take shelter?
 <</timed>>
 <img class="right-dice" src="./assets/images/Dice_coloured_svg-14.svg"/>
 <</nobr>>
+
+:: FinalCheck
+! Endgame
+<<button "< Go Back" AirDefence>><</button>>
+<<button "Continue >" AirDefence>><</button>>
 
 :: AirDefence
 <<nobr>>

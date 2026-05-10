@@ -159,7 +159,7 @@
 		<</if>>
 		<<script>>$("#toggleClock .macro-button")[0].textContent = window.SugarCube.State.temporary.button_name;<</script>>
 	<</button>>
-	<<button "Skip >" AirDefence>><</button>>
+	<<button "Skip >" FinalCheck>><</button>>
 </div>
 
 <<silently>>

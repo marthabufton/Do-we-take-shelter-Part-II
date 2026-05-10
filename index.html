@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://7BB31A4A-9E10-48D9-A1CD-448A7E567A59// --><tw-storydata name="Do we take shelter?" startnode="11" creator="Twine (Twee 3) Language" creator-version="1.1.4" ifid="7BB31A4A-9E10-48D9-A1CD-448A7E567A59" zoom="" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "main.css" */
+	<!-- UUID://7BB31A4A-9E10-48D9-A1CD-448A7E567A59// --><tw-storydata name="Do we take shelter?" startnode="11" creator="Twine (Twee 3) Language" creator-version="1.1.5" ifid="7BB31A4A-9E10-48D9-A1CD-448A7E567A59" zoom="" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "main.css" */
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime');
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
@@ -321,13 +321,21 @@ a:hover {
   justify-content: center;
 }
 
-#passage-selecthousehold4{
+#passage-selecthousehold3, #passage-selecthousehold4{
   display: flex;
   flex-direction: column;
 }
 
-#passage-selecthousehold4 a{
+#passage-selecthousehold3 a, #passage-selecthousehold4 a{
   align-self: center;
+}
+
+#passage-finalcheck{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
 }
 
 /* teacup animation */
@@ -4794,7 +4802,7 @@ Answer the Round 4 questions on your Evidence Report. Add up your Safety Points 
 		&lt;&lt;/if&gt;&gt;
 		&lt;&lt;script&gt;&gt;$(&quot;#toggleClock .macro-button&quot;)[0].textContent = window.SugarCube.State.temporary.button_name;&lt;&lt;/script&gt;&gt;
 	&lt;&lt;/button&gt;&gt;
-	&lt;&lt;button &quot;Skip &gt;&quot; AirDefence&gt;&gt;&lt;&lt;/button&gt;&gt;
+	&lt;&lt;button &quot;Skip &gt;&quot; FinalCheck&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 
 &lt;&lt;silently&gt;&gt;
@@ -4825,7 +4833,6 @@ Answer the Round 4 questions on your Evidence Report. Add up your Safety Points 
     &lt;p class=&quot;fade-text&quot; style=&quot;display:flex;justify-content:center;font-size:1.5em;&quot;&gt;[[Proceed|Greenep]]&lt;/p&gt;
 &lt;&lt;/timed&gt;&gt; */
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Shared3" tags="" position="1100,100" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;audio &quot;shop-bell&quot; volume 0.55 play&gt;&gt;
 &lt;p id=&quot;panel1&quot; class=&quot;fade-text&quot; style=&quot;font-size:1.5em;text-align:center;padding-top:75px;padding-bottom:45px;&quot;&gt;&lt;b&gt;Moderators, household and community members:&lt;/b&gt; read your instructions in the gamer handbook carefully. Listen to more reporting from Radio MAB.&lt;/p&gt;
 
 &lt;div id=&quot;link1&quot; style=&quot;display:flex;height:100vh;justify-content:center;align-self:flex-end;&quot; onclick=&quot;$(&#39;#panel1&#39;).toggle(); $(&#39;#link1&#39;).toggle(); $(&#39;#panel2&#39;).toggle();&quot;&gt;
@@ -4975,16 +4982,22 @@ Answer the Round 4 questions on your Evidence Report. Add up your Safety Points 
 &lt;&lt;next 3s&gt;&gt;
 &lt;p&gt;Now they have returned with whatever additional facts, anecdotes, and even rumours they have heard at the shop.&lt;/p&gt;
 
-&lt;p&gt;More tea is brewing, and [[someone has made some scones.|Shared3]]&lt;/p&gt;
+&lt;p&gt;More tea is brewing, and [[someone has made some scones.|SelectHousehold3]]&lt;/p&gt;
 
 &lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="SelectHousehold4" tags="" position="350,225" size="100,100">&lt;h1 class=&quot;fade-text&quot; style=&quot;text-align:center;&quot;&gt;Round 4&lt;/h1&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="SelectHousehold3" tags="" position="350,225" size="100,100">&lt;&lt;audio &quot;shop-bell&quot; volume 0.55 play&gt;&gt;
+&lt;h1 class=&quot;fade-text&quot; style=&quot;text-align:center;&quot;&gt;Round 3&lt;/h1&gt;
+&lt;p style=&quot;align-self:center;&quot;&gt;Listen to the broadcast from Radio MAB.&lt;/p&gt;
+&lt;div class=&quot;household-page&quot;&gt;
+  &lt;img style=&quot;width:650px;&quot; src=&quot;./assets/images/radio-red.png&quot;&gt;
+&lt;/div&gt;
+[[Turn on your radio|Shared3]]</tw-passagedata><tw-passagedata pid="14" name="SelectHousehold4" tags="" position="475,225" size="100,100">&lt;h1 class=&quot;fade-text&quot; style=&quot;text-align:center;&quot;&gt;Round 4&lt;/h1&gt;
 &lt;p style=&quot;align-self:center;&quot;&gt;Listen to the final broadcast from Radio MAB.&lt;/p&gt;
 &lt;div class=&quot;household-page&quot;&gt;
   &lt;img style=&quot;width:650px;&quot; src=&quot;./assets/images/radio-red.png&quot;&gt;
 &lt;/div&gt;
-[[Turn on your radio|FinalDecisions]]</tw-passagedata><tw-passagedata pid="14" name="FinalDecisions" tags="" position="475,225" size="100,100">&lt;&lt;nobr&gt;&gt;
+[[Turn on your radio|FinalDecisions]]</tw-passagedata><tw-passagedata pid="15" name="FinalDecisions" tags="" position="600,225" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;p id=&quot;panel1&quot; class=&quot;fade-text&quot; style=&quot;font-size:1.5em;text-align:center;padding-top:75px;padding-bottom:45px;&quot;&gt;&lt;b&gt;Moderators, household and community members:&lt;/b&gt; read your instructions in the gamer handbook carefully. Listen to more reporting from Radio MAB.&lt;/p&gt;
 
 &lt;div id=&quot;link1&quot; style=&quot;display:flex;height:100vh;justify-content:center;align-self:flex-end;&quot; onclick=&quot;$(&#39;#panel1&#39;).toggle(); $(&#39;#link1&#39;).toggle(); $(&#39;#panel2&#39;).toggle();&quot;&gt;
@@ -5032,7 +5045,7 @@ Answer the Round 4 questions on your Evidence Report. Add up your Safety Points 
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="FinalInstructions" tags="" position="600,225" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="FinalInstructions" tags="" position="725,225" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;audio &quot;clock-tick&quot; volume 0.15 loop play&gt;&gt;
 &lt;h1&gt;3:25 p.m. … no time to lose.&lt;/h1&gt;
 &lt;&lt;timed 2s t8n&gt;&gt;
@@ -5051,7 +5064,9 @@ Answer the Round 4 questions on your Evidence Report. Add up your Safety Points 
 
 &lt;&lt;/timed&gt;&gt;
 &lt;img class=&quot;right-dice&quot; src=&quot;./assets/images/Dice_coloured_svg-14.svg&quot;/&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="AirDefence" tags="" position="725,225" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="FinalCheck" tags="" position="850,225" size="100,100">! Endgame
+&lt;&lt;button &quot;&lt; Go Back&quot; AirDefence&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Continue &gt;&quot; AirDefence&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="AirDefence" tags="" position="975,225" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;audio &quot;air-raid-siren&quot; volume 1 play&gt;&gt;
 &lt;&lt;timed 8s&gt;&gt;
   &lt;&lt;audio &quot;air-raid-siren&quot; fadeout&gt;&gt;
@@ -5068,7 +5083,7 @@ Answer the Round 4 questions on your Evidence Report. Add up your Safety Points 
   &lt;&lt;audio &quot;air-raid-bbc&quot; fadeout&gt;&gt;
   &lt;&lt;/timed&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="FinalCredits" tags="" position="850,225" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="FinalCredits" tags="" position="1100,225" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;audio &quot;game-theme&quot; volume 0 fadeoverto 7 0.75&gt;&gt;
 
 &lt;section class=&quot;fade-text&quot;&gt;

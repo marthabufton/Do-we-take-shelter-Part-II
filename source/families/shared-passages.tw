@@ -1,6 +1,5 @@
 :: Shared3
 <<nobr>>
-<<audio "shop-bell" volume 0.55 play>>
 <p id="panel1" class="fade-text" style="font-size:1.5em;text-align:center;padding-top:75px;padding-bottom:45px;"><b>Moderators, household and community members:</b> read your instructions in the gamer handbook carefully. Listen to more reporting from Radio MAB.</p>
 
 <div id="link1" style="display:flex;height:100vh;justify-content:center;align-self:flex-end;" onclick="$('#panel1').toggle(); $('#link1').toggle(); $('#panel2').toggle();">

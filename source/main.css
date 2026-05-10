@@ -220,13 +220,21 @@ a:hover {
   justify-content: center;
 }
 
-#passage-selecthousehold4{
+#passage-selecthousehold3, #passage-selecthousehold4{
   display: flex;
   flex-direction: column;
 }
 
-#passage-selecthousehold4 a{
+#passage-selecthousehold3 a, #passage-selecthousehold4 a{
   align-self: center;
+}
+
+#passage-finalcheck{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
 }
 
 /* teacup animation */
