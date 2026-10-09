@@ -4559,7 +4559,7 @@ Config.ui.stowBarInitially = true;
 [[Continue|SelectHousehold4]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Evidence3" tags="" position="350,100" size="100,100">!Evidence Report (consolidate your information)
 &lt;p style=&quot;font-size:1.3em; margin:0&quot;&gt;Roll the die: Static or no static?&lt;/p&gt;
-Then, answer the Round 3 questions on your Evidence Report. Add up your Safety Points for this round.
+Then, answer the Round 3 questions on your Evidence Report. Add up your individual Safety Points for this round
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set _seconds to 300&gt;&gt;
 &lt;div id=&quot;countdown&quot; style=&quot;min-height:unset&quot;&gt;
@@ -4580,6 +4580,7 @@ Then, answer the Round 3 questions on your Evidence Report. Add up your Safety P
 	&lt;&lt;/button&gt;&gt;
 	&lt;&lt;button &quot;Skip &gt;&quot; Debrief3&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
+&lt;img class=&quot;right-dice&quot; src=&quot;./assets/images/Dice_coloured_svg-14.svg&quot;/&gt;
 
 &lt;&lt;silently&gt;&gt;
 	&lt;&lt;repeat 1s&gt;&gt;
@@ -4605,7 +4606,7 @@ Then, answer the Round 3 questions on your Evidence Report. Add up your Safety P
 	&lt;&lt;/repeat&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Evidence4" tags="" position="475,100" size="100,100">!Evidence Report (consolidate your information)
-Answer the Round 4 questions on your Evidence Report. Add up your Safety Points for this round.
+Answer the Round 4 questions on your Evidence Report. Add up your individual Safety Points for this round.
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;audio &quot;clock-tick&quot; volume 0.15 fadeout&gt;&gt;
 &lt;&lt;set _seconds to 300&gt;&gt;
@@ -4844,7 +4845,7 @@ Answer the Round 4 questions on your Evidence Report. Add up your Safety Points 
             &lt;div class=&quot;top&quot;&gt;
                 &lt;div style=&quot;display:flex;align-items:center;justify-content:end;height:100%;&quot;&gt;
                     &lt;img class=&quot;megaphone-backlight&quot; src=&quot;./assets/images/megaphone.svg&quot; onclick=&quot;const audio = document.getElementById(&#39;recording4&#39;); audio.volume = 0.3; audio.play();&quot; tabindex=&quot;0&quot;/&gt;
-                    &lt;audio id=&quot;recording4&quot; src=&quot;./assets/audio/r3p4.mp3&quot;&gt;&lt;/audio&gt;
+                    &lt;audio id=&quot;recording4&quot; src=&quot;./assets/audio/r3p4_normalized.wav&quot;&gt;&lt;/audio&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&quot;paper-container&quot;&gt;
@@ -4874,23 +4875,23 @@ Answer the Round 4 questions on your Evidence Report. Add up your Safety Points 
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="StoryInit" tags="" position="1225,100" size="100,100">&lt;&lt;cacheaudio &quot;game-theme&quot; &quot;./assets/audio/game-theme.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;opening-message&quot; &quot;./assets/audio/opening-message.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;second-message&quot; &quot;./assets/audio/second-message.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;pigeon12&quot; &quot;./assets/audio/pigeon12.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;pigeon34&quot; &quot;./assets/audio/pigeon34.mp3&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="StoryInit" tags="" position="1225,100" size="100,100">&lt;&lt;cacheaudio &quot;game-theme&quot; &quot;./assets/audio/game-theme_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;opening-message&quot; &quot;./assets/audio/opening-message_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;second-message&quot; &quot;./assets/audio/second-message_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;pigeon12&quot; &quot;./assets/audio/pigeon12_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;pigeon34&quot; &quot;./assets/audio/pigeon34_normalized.wav&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;kettle&quot; &quot;./assets/audio/kettle.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;fire&quot; &quot;./assets/audio/fire.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;shop-bell&quot; &quot;./assets/audio/shop-bell.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;church-bell&quot; &quot;./assets/audio/church-bell.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;bicycle-bell&quot; &quot;./assets/audio/bicycle-bell.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;motor-car&quot; &quot;./assets/audio/motor-car.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;streetcar-station&quot; &quot;./assets/audio/streetcar-station.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;pigeon-coo&quot; &quot;./assets/audio/pigeon-coo.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;westminster&quot; &quot;./assets/audio/westminster.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;air-raid-bbc&quot; &quot;./assets/audio/bbc-air-raid.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;clock-tick&quot; &quot;./assets/audio/clock-tick.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;air-raid-siren&quot; &quot;./assets/audio/air-raid-siren.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Start" tags="" position="100,225" size="100,100">&lt;div class=&quot;game-title&quot; style=&quot;margin-bottom: 55px;&quot;&gt;
+&lt;&lt;cacheaudio &quot;shop-bell&quot; &quot;./assets/audio/shop-bell_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;church-bell&quot; &quot;./assets/audio/church-bell_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bicycle-bell&quot; &quot;./assets/audio/bicycle-bell_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;motor-car&quot; &quot;./assets/audio/motor-car_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;streetcar-station&quot; &quot;./assets/audio/streetcar-station_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;pigeon-coo&quot; &quot;./assets/audio/pigeon-coo_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;westminster&quot; &quot;./assets/audio/westminster_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;air-raid-bbc&quot; &quot;./assets/audio/bbc-air-raid_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;clock-tick&quot; &quot;./assets/audio/clock-tick_normalized.wav&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;air-raid-siren&quot; &quot;./assets/audio/air-raid-siren_normalized.wav&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Start" tags="" position="100,225" size="100,100">&lt;div class=&quot;game-title&quot; style=&quot;margin-bottom: 55px;&quot;&gt;
 !Do we take shelter?
 !!//Evaluating “high stakes” information//
 &lt;/div&gt;&lt;&lt;nobr&gt;&gt; /* Leave nobr on this line - removes &lt;br&gt; which conforms with WCAG 1.3.1 */
@@ -4898,7 +4899,7 @@ Answer the Round 4 questions on your Evidence Report. Add up your Safety Points 
 &lt;div class=&quot;ham-radio&quot;&gt;
     &lt;img class=&quot;radio-knob&quot; src=&quot;./assets/images/radio-knob.png&quot; onclick=&quot;$(&#39;.radio-knob&#39;).addClass(&#39;radio-on&#39;); $(&#39;.opening-link&#39;).removeClass(&#39;hidden-link&#39;); document.getElementById(&#39;opening&#39;).play();&quot;&gt;
     &lt;div class=&quot;backlight&quot;&gt;&lt;/div&gt;
-    &lt;audio id=&quot;opening&quot; src=&quot;./assets/audio/second-message.mp3&quot;&gt;&lt;/audio&gt;
+    &lt;audio id=&quot;opening&quot; src=&quot;./assets/audio/second-message_normalized.wav&quot;&gt;&lt;/audio&gt;
 
     &lt;img class=&quot;radio-base&quot; src=&quot;./assets/images/radio-base.png&quot;&gt;
 &lt;/div&gt;
@@ -5009,7 +5010,7 @@ Answer the Round 4 questions on your Evidence Report. Add up your Safety Points 
             &lt;div class=&quot;top&quot;&gt;
                 &lt;div style=&quot;display:flex;align-items:center;justify-content:end;height:100%;&quot;&gt;
                     &lt;img class=&quot;megaphone-backlight&quot; src=&quot;./assets/images/megaphone.svg&quot; onclick=&quot;const audio = document.getElementById(&#39;recording4&#39;); audio.volume = 0.3; audio.play();&quot; tabindex=&quot;0&quot;/&gt;
-                    &lt;audio id=&quot;recording4&quot; src=&quot;./assets/audio/r4p5.mp3&quot;&gt;&lt;/audio&gt;
+                    &lt;audio id=&quot;recording4&quot; src=&quot;./assets/audio/r4p5_normalized.wav&quot;&gt;&lt;/audio&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&quot;paper-container&quot;&gt;
@@ -5084,7 +5085,7 @@ Answer the Round 4 questions on your Evidence Report. Add up your Safety Points 
   &lt;&lt;/timed&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="FinalCredits" tags="" position="1100,225" size="100,100">&lt;&lt;nobr&gt;&gt;
-&lt;&lt;audio &quot;game-theme&quot; volume 0 fadeoverto 7 0.75&gt;&gt;
+&lt;&lt;audio &quot;game-theme&quot; volume 0 fadeoverto 7 0.50&gt;&gt;
 
 &lt;section class=&quot;fade-text&quot;&gt;
     &lt;div class=&quot;pulsating-light&quot;&gt;&lt;/div&gt;

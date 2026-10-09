@@ -11,7 +11,7 @@
             <div class="top">
                 <div style="display:flex;align-items:center;justify-content:end;height:100%;">
                     <img class="megaphone-backlight" src="./assets/images/megaphone.svg" onclick="const audio = document.getElementById('recording4'); audio.volume = 0.3; audio.play();" tabindex="0"/>
-                    <audio id="recording4" src="./assets/audio/r3p4.mp3"></audio>
+                    <audio id="recording4" src="./assets/audio/r3p4_normalized.wav"></audio>
                 </div>
             </div>
             <div class="paper-container">

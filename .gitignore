@@ -3,4 +3,9 @@ format.js
 settings.json
 
 # MacOS generated files
+*/.DS_Store
 .DS_Store
+
+# Audio tomfoolery
+audio2/
+
