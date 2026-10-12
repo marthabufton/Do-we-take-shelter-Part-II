@@ -24,6 +24,7 @@
 <<cacheaudio "air-raid-bbc" "./assets/audio/bbc-air-raid_normalized.wav">>
 <<cacheaudio "clock-tick" "./assets/audio/clock-tick_normalized.wav">>
 <<cacheaudio "air-raid-siren" "./assets/audio/air-raid-siren_normalized.wav">>
+<<cacheaudio "post-raid" "./assets/audio/post-raid.wav">>
 
 
 
@@ -237,13 +238,59 @@ Do we take shelter?
 </div>
 <<timed 5s t8n>>
   <div style="position: fixed;inset: 0;width: fit-content;height: fit-content;margin: auto;">
-    <p style="font-size:2em">[[Who will survive?|FinalCredits]]</p>
+    <p style="font-size:2em">[[Who will survive?|BBCSummary]]</p>
   </div>
 <</timed>>
 <<timed 15s>>
   <<audio "air-raid-bbc" fadeout>>
   <</timed>>
 <</timed>>
+<</nobr>>
+
+
+:: BBCSummary
+<<nobr>>
+  <p id="panel1" class="fade-text" style="font-size:1.5em;text-align:center;padding-top:75px;padding-bottom:45px;"><b>Moderators, household and community members:</b> read your instructions in the gamer handbook carefully. Listen to more reporting from Radio MAB.</p>
+
+<div id="link1" style="display:flex;height:100vh;justify-content:center;align-self:flex-end;" onclick="$('#panel1').toggle(); $('#link1').toggle(); $('#panel2').toggle();">
+    <img class="tower-backlight" src="./assets/images/manchester-radio-tower.svg"/>
+</div>
+<div class="fade-text" id="panel2" style="display: none;">
+    <div class="fade-text notepad-container">
+        <div class="notepad">
+            <div class="top">
+                <div style="display:flex;align-items:center;justify-content:end;height:100%;">
+                    <img class="megaphone-backlight" src="./assets/images/megaphone.svg" onclick="const audio = document.getElementById('recording5'); audio.volume = 0.5; audio.play();" tabindex="0"/>
+                    <audio id="recording5" src="./assets/audio/post-raid.wav"></audio>
+                </div>
+            </div>
+            <div class="paper-container">
+                <div class="paper">
+                    This is the BBC . Here is the news summary for this morning, December 24, 1940.
+                    <br><br>
+Last night, the enemy carried out a heavy and sustained attack upon the city of
+Manchester.
+<br><br>
+High-explosive bombs of varying sizes and many incendiary containers were dropped
+over districts of the city. Fires broke out in several localities, but these were promptly
+tackled by our civil defense services, the auxiliary fire service, and air-raid precautions
+wardens.
+<br><br>
+Damage was caused to residential property and certain commercial premises.
+Casualties have been reported, and rescue operations are continuing at this hour. Full
+details of the raid are still coming in.
+<br><br>
+We remind listeners that the 'All Clear' signal has now sounded for Manchester. Stay
+tuned for further announcements.
+                    <br><br>
+                    <p class="paper-end" style="text-align:center;">[[Good Luck|FinalCredits]]</p>
+<br>
+                    This announcement is based on BBC radio announcements regarding German blitzes during World War II.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <</nobr>>
 
 :: FinalCredits
