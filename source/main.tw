@@ -7,23 +7,23 @@
 }
 
 :: StoryInit
-<<cacheaudio "game-theme" "./assets/audio/game-theme.mp3">>
-<<cacheaudio "opening-message" "./assets/audio/opening-message.mp3">>
-<<cacheaudio "second-message" "./assets/audio/second-message.mp3">>
-<<cacheaudio "pigeon12" "./assets/audio/pigeon12.mp3">>
-<<cacheaudio "pigeon34" "./assets/audio/pigeon34.mp3">>
+<<cacheaudio "game-theme" "./assets/audio/game-theme_normalized.wav">>
+<<cacheaudio "opening-message" "./assets/audio/opening-message_normalized.wav">>
+<<cacheaudio "second-message" "./assets/audio/second-message_normalized.wav">>
+<<cacheaudio "pigeon12" "./assets/audio/pigeon12_normalized.wav">>
+<<cacheaudio "pigeon34" "./assets/audio/pigeon34_normalized.wav">>
 <<cacheaudio "kettle" "./assets/audio/kettle.mp3">>
 <<cacheaudio "fire" "./assets/audio/fire.mp3">>
-<<cacheaudio "shop-bell" "./assets/audio/shop-bell.mp3">>
-<<cacheaudio "church-bell" "./assets/audio/church-bell.mp3">>
-<<cacheaudio "bicycle-bell" "./assets/audio/bicycle-bell.mp3">>
-<<cacheaudio "motor-car" "./assets/audio/motor-car.mp3">>
-<<cacheaudio "streetcar-station" "./assets/audio/streetcar-station.mp3">>
-<<cacheaudio "pigeon-coo" "./assets/audio/pigeon-coo.mp3">>
-<<cacheaudio "westminster" "./assets/audio/westminster.mp3">>
-<<cacheaudio "air-raid-bbc" "./assets/audio/bbc-air-raid.mp3">>
-<<cacheaudio "clock-tick" "./assets/audio/clock-tick.mp3">>
-<<cacheaudio "air-raid-siren" "./assets/audio/air-raid-siren.mp3">>
+<<cacheaudio "shop-bell" "./assets/audio/shop-bell_normalized.wav">>
+<<cacheaudio "church-bell" "./assets/audio/church-bell_normalized.wav">>
+<<cacheaudio "bicycle-bell" "./assets/audio/bicycle-bell_normalized.wav">>
+<<cacheaudio "motor-car" "./assets/audio/motor-car_normalized.wav">>
+<<cacheaudio "streetcar-station" "./assets/audio/streetcar-station_normalized.wav">>
+<<cacheaudio "pigeon-coo" "./assets/audio/pigeon-coo_normalized.wav">>
+<<cacheaudio "westminster" "./assets/audio/westminster_normalized.wav">>
+<<cacheaudio "air-raid-bbc" "./assets/audio/bbc-air-raid_normalized.wav">>
+<<cacheaudio "clock-tick" "./assets/audio/clock-tick_normalized.wav">>
+<<cacheaudio "air-raid-siren" "./assets/audio/air-raid-siren_normalized.wav">>
 
 
 
@@ -40,7 +40,7 @@ Do we take shelter?
 <div class="ham-radio">
     <img class="radio-knob" src="./assets/images/radio-knob.png" onclick="$('.radio-knob').addClass('radio-on'); $('.opening-link').removeClass('hidden-link'); document.getElementById('opening').play();">
     <div class="backlight"></div>
-    <audio id="opening" src="./assets/audio/second-message.mp3"></audio>
+    <audio id="opening" src="./assets/audio/second-message_normalized.wav"></audio>
 
     <img class="radio-base" src="./assets/images/radio-base.png">
 </div>
@@ -161,7 +161,7 @@ Do we take shelter?
             <div class="top">
                 <div style="display:flex;align-items:center;justify-content:end;height:100%;">
                     <img class="megaphone-backlight" src="./assets/images/megaphone.svg" onclick="const audio = document.getElementById('recording4'); audio.volume = 0.3; audio.play();" tabindex="0"/>
-                    <audio id="recording4" src="./assets/audio/r4p5.mp3"></audio>
+                    <audio id="recording4" src="./assets/audio/r4p5_normalized.wav"></audio>
                 </div>
             </div>
             <div class="paper-container">
@@ -248,7 +248,7 @@ Do we take shelter?
 
 :: FinalCredits
 <<nobr>>
-<<audio "game-theme" volume 0 fadeoverto 7 0.75>>
+<<audio "game-theme" volume 0 fadeoverto 7 0.50>>
 
 <section class="fade-text">
     <div class="pulsating-light"></div>

@@ -1,7 +1,7 @@
 :: Evidence3
 !Evidence Report (consolidate your information)
 <p style="font-size:1.3em; margin:0">Roll the die: Static or no static?</p>
-Then, answer the Round 3 questions on your Evidence Report. Add up your Safety Points for this round.
+Then, answer the Round 3 questions on your Evidence Report. Add up your individual Safety Points for this round
 <<nobr>>
 <<set _seconds to 300>>
 <div id="countdown" style="min-height:unset">
@@ -22,6 +22,7 @@ Then, answer the Round 3 questions on your Evidence Report. Add up your Safety P
 	<</button>>
 	<<button "Skip >" Debrief3>><</button>>
 </div>
+<img class="right-dice" src="./assets/images/Dice_coloured_svg-14.svg"/>
 
 <<silently>>
 	<<repeat 1s>>
@@ -50,7 +51,7 @@ Then, answer the Round 3 questions on your Evidence Report. Add up your Safety P
 
 :: Evidence4
 !Evidence Report (consolidate your information)
-Answer the Round 4 questions on your Evidence Report. Add up your Safety Points for this round.
+Answer the Round 4 questions on your Evidence Report. Add up your individual Safety Points for this round.
 <<nobr>>
 <<audio "clock-tick" volume 0.15 fadeout>>
 <<set _seconds to 300>>
