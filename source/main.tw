@@ -204,11 +204,12 @@ Do we take shelter?
 <<nobr>>
 <<audio "clock-tick" volume 0.15 loop play>>
 <h1>3:25 p.m. … no time to lose.</h1>
+
+<div style="width:65vw;">
 <<timed 2s t8n>>
-<p>The blackout is in effect.</p>
+<p style="padding-bottom:21px;">The blackout is in effect.</p>
 
 <<next 3s>>
-<br>
 <p>Now you must consolidate your evidence and make your final evaluation of the information you have gathered.</p>
 <p>First, you have 5 minutes to complete your Evidence Report. Answer the Round 4 questions on your Evidence Report. Add up your Safety Points for this round.</p>
 <p>Second, you have 1 minute to roll the dice one more time to either gain or lose points.</p>
@@ -216,10 +217,18 @@ Do we take shelter?
 
 <<next 7s>>
 <br>
-<p>Get ready to evaluate and decide … [[the clock is ticking|Evidence4]] and the bombers may be on the way.</p>
+<p style="padding-top:30px;">Get ready to evaluate and decide … [[the clock is ticking|Evidence4]] and the bombers may be on the way.</p>
 
 <</timed>>
-<img class="right-dice" src="./assets/images/Dice_coloured_svg-14.svg"/>
+</div>
+
+<div class="tree-container">
+    <div class="tree">
+        <div class="tree-glow"></div>
+        <img class="tree-img" src="./assets/images/xmas-tree.svg" alt="Christmas tree" />
+    </div>
+</div>
+
 <</nobr>>
 
 :: FinalCheck
@@ -302,8 +311,8 @@ tuned for further announcements.
 </section>
 
 <<for $i = 1;$i <= 100; $i++>>
-    <div class="circle-container">
-        <div class="circle"></div>
+    <div class="fire-circle-container">
+        <div class="fire-circle"></div>
     </div>
 <</for>>
 

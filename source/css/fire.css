@@ -1,700 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime');
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: #191a2c;
-  font-family: 'Georgia', serif;
-  color: #ebe2d4;
-  font-size: larger;
-}
-
-a {
-  color: #ebe2d4;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-a:hover {
-  color: #ebe2d4;
-}
-
-.game-title {
-  text-align: center;
-}
-
-.divider {
-  width: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ham-radio {
-  /* position: relative; */
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.radio-knob {
-  position: relative;
-  /* height: 15vmin; */
-  width: 8.9vmin;
-
-  top: -3.4vmin;
-  left: 41.9vmin;
-  z-index: 3;
-}
-
-.backlight {
-  position: relative;
-  height: 5vmin;
-  width: 5vmin;
-  border-radius: 50%;
-
-  top: -3.4vmin;
-  left: 35vmin;
-  z-index: 2;
-  animation: glow-image 1s ease-in-out infinite alternate;
-}
-
-
-.radio-on {
-  transform: rotate(50deg);
-}
-
-.radio-base {
-  position: relative;
-  /* height: 50vmin; */
-  width: 69vmin;
-
-  top: 0;
-  left: -6vmin;
-  z-index: 1;
-}
-
-.pigeon {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pigeon-note {
-  position: relative;
-  /* height: 15vmin; */
-  width: 8.7vmin;
-
-  top: 27vmin;
-  left: 57vmin;
-  z-index: 3;
-}
-
-.backlight-pigeon {
-  position: relative;
-  height: 5vmin;
-  width: 5vmin;
-  border-radius: 50%;
-
-  top: 27vmin;
-  left: 53vmin;
-  z-index: 2;
-  transform: rotate(-35deg);
-
-  animation: glow-image 1s ease-in-out infinite alternate;
-}
-
-.pigeon-base {
-  position: relative;
-  /* height: 50vmin; */
-  width: 105vmin;
-
-  top: -3vmin;
-  left: -5vmin;
-  z-index: 1;
-}
-
-@keyframes glow-svg {
-  from {
-    filter: drop-shadow(0px 0px 10px greenyellow);
-  }
-  to {
-    filter: drop-shadow(0px 0px 1px greenyellow);
-  }
-}
-
-
-@keyframes glow-image {
-  from {
-    box-shadow: 0 0 30px 15px greenyellow;
-  }
-  to {
-    box-shadow: 0 0 30px 25px greenyellow;
-  }
-}
-
-.opening-link {
-  text-align: center;
-  /* position: absolute;
-  left: 50%;
-  bottom: 125px;
-  transform: translate(-50%, 0); */
-}
-
-.hidden-link {
-  display: none;
-}
-
-#countdown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 79vh;
-}
-
-#countdown {
-  min-height: 71vh;
-}
-
-#toggleClock {
-  display: flex;
-  justify-content: center;
-}
-
-#toggleClock .macro-button{
-  height: 60px;
-  width: 90px;
-}
-
-#ui-bar {
-  background-color: #191a2c;
-}
-
-#ui-bar a {
-  animation: none;
-}
-
-.typewriter {
-  font-family: 'Courier Prime', monospace;
-  font-size: 1.5em;
-}
-
-.fade-text {
-  animation-name: fadeIn;
-  animation-duration: 1s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-@media screen and (min-width: 2500px) {
-  html {
-    font-size: 0.75vw;
-  }
-}
-
-@media screen and (min-width: 3000px) {
-  html {
-    font-size: 1vw;
-  }
-}
-
-.household-page {
-  display: flex;
-  justify-content: center;
-}
-
-#passage-selecthousehold3, #passage-selecthousehold4{
-  display: flex;
-  flex-direction: column;
-}
-
-#passage-selecthousehold3 a, #passage-selecthousehold4 a{
-  align-self: center;
-}
-
-#passage-finalcheck{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 20px;
-}
-
-/* teacup animation */
-
-.teacup-container {
-  position: fixed;
-  bottom: 15px;
-  left: 7vw;
-
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-
-.teacup {
-  z-index: 5;
-  color: antiquewhite;
-  width: 275px;
-  grid-area: 1 / 1 / 6 / 6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.vapour {
-  z-index: 1;
-  grid-area: 1 / 1 / 6 / 6;
-  display: flex;
-  align-items: center;
-  padding-left: 61px;
-}
-
-.vapour span {
-  display: block;
-  position: relative;
-  margin: 0 2px 50px;
-  bottom: 25px;
-  height: 120px;
-  min-width: 3.5px;
-  background: whitesmoke;
-  border-radius: 50%;
-
-  animation: vapour 5s linear infinite;
-  animation-delay: calc(var(--i) * -0.5s);
-  opacity: 0;
-  filter: blur(9px);
-}
-
-@keyframes vapour {
-  0% {
-    transform: translateY(0) scaleX(1);
-    opacity: 0;
-  } 15% {
-    opacity: 0.5;
-  } 50% {
-    transform: translateY(-150px) scaleX(5);
-  } 95% {
-    opacity: 0;
-  } 100% {
-    transform: translateY(-300px) scaleX(10);
-  }
-}
-
-/* bike animation adapted from: https://codepen.io/lucawater/pen/VwQVyj */
-
-@keyframes wheelspin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes floor {
-  to {
-    background-position-x: 100%;
-  }
-}
-
-@keyframes pedalstem-front {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes pedalstem-back {
-  from {
-    transform: rotate(-180deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes pedalbase-front {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-@keyframes pedalbase-back {
-  from {
-    transform: rotate(180deg);
-  }
-  to {
-    transform: rotate(-180deg);
-  }
-}
-
-@keyframes riding {
-  from {
-    transform: translateX(-250%);
-  }
-  to {
-    transform: translateX(250%);
-    display: none;
-  }
-}
-
-.bike {
-  width: 600px;
-  height: 400px;
-  margin: auto;
-  margin-top: 368px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  animation-name: riding;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-.bike .part {
-  position: absolute;
-}
-
-.frame .bar {
-  width: 12px;
-  position: absolute;
-  background: rgb(177, 53, 53);
-}
-.frame .bar.left-top {
-  width: 10px;
-  height: 186px;
-  margin-left: 128px;
-  margin-top: 110px;
-  transform: rotate(37deg);
-}
-.frame .bar.left-bottom {
-  width: 8px;
-  margin-left: 149px;
-  margin-top: 203px;
-  height: 170px;
-  transform: rotate(-82deg);
-}
-.frame .bar.left {
-  height: 230px;
-  margin-left: 200px;
-  margin-top: 80px;
-  transform: rotate(-15deg);
-}
-.frame .bar.top {
-  height: 224px;
-  margin-left: 282px;
-  margin-top: -10px;
-  transform: rotate(90deg);
-}
-.frame .bar.bottom {
-  margin-left: 317px;
-  margin-top: 87px;
-  height: 250px;
-  transform: rotate(45deg);
-}
-.frame .bar.right {
-  height: 230px;
-  margin-left: 421px;
-  margin-top: 60px;
-  transform: rotate(-19deg);
-}
-
-.saddle {
-  margin-left: 184px;
-}
-.saddle .sit-here {
-  height: 0;
-  width: 10px;
-  position: absolute;
-  border-bottom: 110px solid #3a2317;
-  border-left: 0px solid transparent;
-  border-right: 22px solid transparent;
-  border-radius: 10px 0 10px 0;
-  margin-top: -20px;
-  margin-left: -35px;
-  transform: rotate(98deg);
-}
-.saddle .saddlepen {
-  width: 10px;
-  height: 200px;
-  margin-top: 30px;
-  position: absolute;
-  background: #f4decb;
-  transform: rotate(-16deg);
-}
-
-.wheel {
-  width: 200px;
-  height: 200px;
-  margin-top: 160px;
-  border-radius: 100%;
-  border: 15px solid #f4decb;
-  box-shadow: 0 0 0 10px #a87e62;
-  animation-name: wheelspin;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.wheel.left {
-  margin-left: -35px;
-}
-.wheel.right {
-  margin-left: 348px;
-}
-.wheel .spoke {
-  width: 2px;
-  height: 200px;
-  margin-left: 98px;
-  position: absolute;
-  background: #f4decb;
-}
-.wheel .spoke:nth-child(2) {
-  transform: rotate(30deg);
-}
-.wheel .spoke:nth-child(3) {
-  transform: rotate(60deg);
-}
-.wheel .spoke:nth-child(4) {
-  transform: rotate(90deg);
-}
-.wheel .spoke:nth-child(5) {
-  transform: rotate(120deg);
-}
-.wheel .spoke:nth-child(6) {
-  transform: rotate(150deg);
-}
-.wheel .spoke:nth-child(7) {
-  transform: rotate(180deg);
-}
-.wheel .spoke:nth-child(8) {
-  transform: rotate(210deg);
-}
-
-.axis {
-  width: 25px;
-  height: 25px;
-  margin-top: 265px;
-  position: absolute;
-  background: #a87e62;
-  border-radius: 100%;
-}
-.axis.left {
-  margin-left: 67px;
-}
-.axis.right {
-  margin-left: 451px;
-}
-
-.handlebar .stem {
-  width: 10px;
-  height: 200px;
-  margin-top: 45px;
-  margin-left: 412px;
-  position: absolute;
-  background: #f4decb;
-  transform: rotate(-19deg);
-}
-.handlebar .connector {
-  width: 20px;
-  height: 20px;
-  margin-left: 374px;
-  margin-top: 40px;
-  transform: rotate(-19deg);
-  background: #f4decb;
-}
-.handlebar .prehandle {
-  width: 15px;
-  height: 40px;
-  margin-left: 394px;
-  margin-top: -45px;
-  transform: rotate(42deg);
-  background: #f4decb;
-}
-.handlebar .handle {
-  width: 25px;
-  height: 25px;
-  margin-left: 400px;
-  margin-top: -45px;
-  position: absolute;
-  background: #3a2317;
-  border-radius: 100%;
-}
-
-.pedals {
-  margin-left: 227px;
-  margin-top: 295px;
-}
-.pedals * {
-  position: absolute;
-}
-.pedals .inside {
-  width: 9px;
-  height: 9px;
-  background: #a87e62;
-  border-radius: 100%;
-  margin-left: 3.5px;
-  margin-top: 2.4px;
-}
-.pedals .outside {
-  width: 80px;
-  height: 80px;
-  margin-top: -39px;
-  margin-left: -37px;
-  border: 5px solid #3a2317;
-  border-radius: 100%;
-}
-.pedals .pedalstem {
-  width: 12px;
-  height: 80px;
-  margin-left: 2px;
-  background: #f4decb;
-  border-radius: 10px 10px 0 0;
-  transform-origin: 6px 7px;
-}
-.pedals .pedalstem.front {
-  animation-name: pedalstem-front;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.pedals .pedalstem.back {
-  animation-name: pedalstem-back;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  transform: rotate(180deg);
-}
-.pedals .pedalbase {
-  width: 40px;
-  height: 15px;
-  margin-top: 70px;
-  margin-left: -12px;
-  background: #3a2317;
-}
-.pedals .pedalbase.front {
-  animation-name: pedalbase-front;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.pedals .pedalbase.back {
-  animation-name: pedalbase-back;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.inside {
-  z-index: 6;
-}
-
-.axis {
-  z-index: 5;
-}
-
-.pedalstem.front {
-  z-index: 5;
-}
-
-.frame {
-  z-index: 4;
-}
-
-.outside {
-  z-index: 4;
-}
-
-.handlebar {
-  z-index: 3;
-}
-
-.sit-here {
-  z-index: 2;
-}
-
-.wheel {
-  z-index: 1;
-}
-
-.pedalstem.back {
-  z-index: -1;
-}
-
-/* fire animation */
-
-.pulsating-light {
-  width: 1300px;
-  height: 200px;
-  opacity: 0.6;
-  box-shadow: 0px 100px 200px 100px orangered;
-  position: absolute;
-  left: 100px;
-  bottom: -200px;
-  border-radius: 50%;
-  background: orangered;
-  animation: pulsinglight 5s linear infinite alternate;
-}
-
-/* fire particle/glow effect */
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px greenyellow;
-  }
-  to {
-    text-shadow: 0 0 17px greenyellow;
-  }
-}
-
-
-@keyframes pulsinglight {
-  0% {box-shadow: 50px 80px 175px 80px orangred;}
-  12.5% {box-shadow: 85px 110px 187px 90px orangred;}
-  25% {box-shadow: 120px 140px 200px 100px red;}
-  37.5% {box-shadow: 140px 140px 220px 130px red;}
-  50% {box-shadow: 160px 140px 240px 160px orangered;}
-  62.5% {box-shadow: 140px 170px 260px 175px orangered;}
-  75% {box-shadow: 120px 200px 280px 190px #FF8C00;}
-  87.5% {box-shadow: 100px 175px 235px 155px #FF8C00;}
-  100% {box-shadow: 80px 150px 190px 120px orangered;}
-}
-
 /* adapted from CSS Particle Animation by Takeshi Kano: https://codepen.io/tonkotsuboy/pen/xaMVpo */
-.circle-container {
+.fire-circle-container {
   position: absolute;
   transform: translateY(-10vh);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-.circle-container .circle {
+.fire-circle-container .fire-circle {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -724,7 +35,7 @@ a:hover {
     transform: scale3d(0.4, 0.4, 1);
   }
 }
-.circle-container:nth-child(1) {
+.fire-circle-container:nth-child(1) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-1;
@@ -739,10 +50,10 @@ a:hover {
     transform: translate3d(51vw, -126vh, 0);
   }
 }
-.circle-container:nth-child(1) .circle {
+.fire-circle-container:nth-child(1) .fire-circle {
   animation-delay: 1043ms;
 }
-.circle-container:nth-child(2) {
+.fire-circle-container:nth-child(2) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-2;
@@ -757,10 +68,10 @@ a:hover {
     transform: translate3d(5vw, -124vh, 0);
   }
 }
-.circle-container:nth-child(2) .circle {
+.fire-circle-container:nth-child(2) .fire-circle {
   animation-delay: 1077ms;
 }
-.circle-container:nth-child(3) {
+.fire-circle-container:nth-child(3) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-3;
@@ -775,10 +86,10 @@ a:hover {
     transform: translate3d(54vw, -133vh, 0);
   }
 }
-.circle-container:nth-child(3) .circle {
+.fire-circle-container:nth-child(3) .fire-circle {
   animation-delay: 2982ms;
 }
-.circle-container:nth-child(4) {
+.fire-circle-container:nth-child(4) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-4;
@@ -793,10 +104,10 @@ a:hover {
     transform: translate3d(94vw, -129vh, 0);
   }
 }
-.circle-container:nth-child(4) .circle {
+.fire-circle-container:nth-child(4) .fire-circle {
   animation-delay: 2050ms;
 }
-.circle-container:nth-child(5) {
+.fire-circle-container:nth-child(5) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-5;
@@ -811,10 +122,10 @@ a:hover {
     transform: translate3d(52vw, -117vh, 0);
   }
 }
-.circle-container:nth-child(5) .circle {
+.fire-circle-container:nth-child(5) .fire-circle {
   animation-delay: 407ms;
 }
-.circle-container:nth-child(6) {
+.fire-circle-container:nth-child(6) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-6;
@@ -829,10 +140,10 @@ a:hover {
     transform: translate3d(7vw, -124vh, 0);
   }
 }
-.circle-container:nth-child(6) .circle {
+.fire-circle-container:nth-child(6) .fire-circle {
   animation-delay: 2850ms;
 }
-.circle-container:nth-child(7) {
+.fire-circle-container:nth-child(7) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-7;
@@ -847,10 +158,10 @@ a:hover {
     transform: translate3d(41vw, -116vh, 0);
   }
 }
-.circle-container:nth-child(7) .circle {
+.fire-circle-container:nth-child(7) .fire-circle {
   animation-delay: 3407ms;
 }
-.circle-container:nth-child(8) {
+.fire-circle-container:nth-child(8) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-8;
@@ -865,10 +176,10 @@ a:hover {
     transform: translate3d(28vw, -123vh, 0);
   }
 }
-.circle-container:nth-child(8) .circle {
+.fire-circle-container:nth-child(8) .fire-circle {
   animation-delay: 2454ms;
 }
-.circle-container:nth-child(9) {
+.fire-circle-container:nth-child(9) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-9;
@@ -883,10 +194,10 @@ a:hover {
     transform: translate3d(41vw, -113vh, 0);
   }
 }
-.circle-container:nth-child(9) .circle {
+.fire-circle-container:nth-child(9) .fire-circle {
   animation-delay: 3387ms;
 }
-.circle-container:nth-child(10) {
+.fire-circle-container:nth-child(10) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-10;
@@ -901,10 +212,10 @@ a:hover {
     transform: translate3d(10vw, -112vh, 0);
   }
 }
-.circle-container:nth-child(10) .circle {
+.fire-circle-container:nth-child(10) .fire-circle {
   animation-delay: 2448ms;
 }
-.circle-container:nth-child(11) {
+.fire-circle-container:nth-child(11) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-11;
@@ -919,10 +230,10 @@ a:hover {
     transform: translate3d(9vw, -133vh, 0);
   }
 }
-.circle-container:nth-child(11) .circle {
+.fire-circle-container:nth-child(11) .fire-circle {
   animation-delay: 542ms;
 }
-.circle-container:nth-child(12) {
+.fire-circle-container:nth-child(12) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-12;
@@ -937,10 +248,10 @@ a:hover {
     transform: translate3d(47vw, -126vh, 0);
   }
 }
-.circle-container:nth-child(12) .circle {
+.fire-circle-container:nth-child(12) .fire-circle {
   animation-delay: 2503ms;
 }
-.circle-container:nth-child(13) {
+.fire-circle-container:nth-child(13) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-13;
@@ -955,10 +266,10 @@ a:hover {
     transform: translate3d(87vw, -122vh, 0);
   }
 }
-.circle-container:nth-child(13) .circle {
+.fire-circle-container:nth-child(13) .fire-circle {
   animation-delay: 645ms;
 }
-.circle-container:nth-child(14) {
+.fire-circle-container:nth-child(14) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-14;
@@ -973,10 +284,10 @@ a:hover {
     transform: translate3d(45vw, -111vh, 0);
   }
 }
-.circle-container:nth-child(14) .circle {
+.fire-circle-container:nth-child(14) .fire-circle {
   animation-delay: 3558ms;
 }
-.circle-container:nth-child(15) {
+.fire-circle-container:nth-child(15) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-15;
@@ -991,10 +302,10 @@ a:hover {
     transform: translate3d(17vw, -116vh, 0);
   }
 }
-.circle-container:nth-child(15) .circle {
+.fire-circle-container:nth-child(15) .fire-circle {
   animation-delay: 1749ms;
 }
-.circle-container:nth-child(16) {
+.fire-circle-container:nth-child(16) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-16;
@@ -1009,10 +320,10 @@ a:hover {
     transform: translate3d(37vw, -115vh, 0);
   }
 }
-.circle-container:nth-child(16) .circle {
+.fire-circle-container:nth-child(16) .fire-circle {
   animation-delay: 3166ms;
 }
-.circle-container:nth-child(17) {
+.fire-circle-container:nth-child(17) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-17;
@@ -1027,10 +338,10 @@ a:hover {
     transform: translate3d(58vw, -115vh, 0);
   }
 }
-.circle-container:nth-child(17) .circle {
+.fire-circle-container:nth-child(17) .fire-circle {
   animation-delay: 192ms;
 }
-.circle-container:nth-child(18) {
+.fire-circle-container:nth-child(18) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-18;
@@ -1045,10 +356,10 @@ a:hover {
     transform: translate3d(2vw, -116vh, 0);
   }
 }
-.circle-container:nth-child(18) .circle {
+.fire-circle-container:nth-child(18) .fire-circle {
   animation-delay: 1843ms;
 }
-.circle-container:nth-child(19) {
+.fire-circle-container:nth-child(19) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-19;
@@ -1063,10 +374,10 @@ a:hover {
     transform: translate3d(47vw, -118vh, 0);
   }
 }
-.circle-container:nth-child(19) .circle {
+.fire-circle-container:nth-child(19) .fire-circle {
   animation-delay: 1833ms;
 }
-.circle-container:nth-child(20) {
+.fire-circle-container:nth-child(20) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-20;
@@ -1081,10 +392,10 @@ a:hover {
     transform: translate3d(90vw, -109vh, 0);
   }
 }
-.circle-container:nth-child(20) .circle {
+.fire-circle-container:nth-child(20) .fire-circle {
   animation-delay: 1153ms;
 }
-.circle-container:nth-child(21) {
+.fire-circle-container:nth-child(21) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-21;
@@ -1099,10 +410,10 @@ a:hover {
     transform: translate3d(10vw, -118vh, 0);
   }
 }
-.circle-container:nth-child(21) .circle {
+.fire-circle-container:nth-child(21) .fire-circle {
   animation-delay: 3786ms;
 }
-.circle-container:nth-child(22) {
+.fire-circle-container:nth-child(22) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-22;
@@ -1117,10 +428,10 @@ a:hover {
     transform: translate3d(21vw, -112vh, 0);
   }
 }
-.circle-container:nth-child(22) .circle {
+.fire-circle-container:nth-child(22) .fire-circle {
   animation-delay: 2507ms;
 }
-.circle-container:nth-child(23) {
+.fire-circle-container:nth-child(23) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-23;
@@ -1135,10 +446,10 @@ a:hover {
     transform: translate3d(19vw, -136vh, 0);
   }
 }
-.circle-container:nth-child(23) .circle {
+.fire-circle-container:nth-child(23) .fire-circle {
   animation-delay: 3943ms;
 }
-.circle-container:nth-child(24) {
+.fire-circle-container:nth-child(24) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-24;
@@ -1153,10 +464,10 @@ a:hover {
     transform: translate3d(97vw, -130vh, 0);
   }
 }
-.circle-container:nth-child(24) .circle {
+.fire-circle-container:nth-child(24) .fire-circle {
   animation-delay: 3444ms;
 }
-.circle-container:nth-child(25) {
+.fire-circle-container:nth-child(25) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-25;
@@ -1171,10 +482,10 @@ a:hover {
     transform: translate3d(49vw, -109vh, 0);
   }
 }
-.circle-container:nth-child(25) .circle {
+.fire-circle-container:nth-child(25) .fire-circle {
   animation-delay: 1012ms;
 }
-.circle-container:nth-child(26) {
+.fire-circle-container:nth-child(26) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-26;
@@ -1189,10 +500,10 @@ a:hover {
     transform: translate3d(29vw, -128vh, 0);
   }
 }
-.circle-container:nth-child(26) .circle {
+.fire-circle-container:nth-child(26) .fire-circle {
   animation-delay: 1383ms;
 }
-.circle-container:nth-child(27) {
+.fire-circle-container:nth-child(27) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-27;
@@ -1207,10 +518,10 @@ a:hover {
     transform: translate3d(12vw, -122vh, 0);
   }
 }
-.circle-container:nth-child(27) .circle {
+.fire-circle-container:nth-child(27) .fire-circle {
   animation-delay: 559ms;
 }
-.circle-container:nth-child(28) {
+.fire-circle-container:nth-child(28) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-28;
@@ -1225,10 +536,10 @@ a:hover {
     transform: translate3d(100vw, -112vh, 0);
   }
 }
-.circle-container:nth-child(28) .circle {
+.fire-circle-container:nth-child(28) .fire-circle {
   animation-delay: 1489ms;
 }
-.circle-container:nth-child(29) {
+.fire-circle-container:nth-child(29) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-29;
@@ -1243,10 +554,10 @@ a:hover {
     transform: translate3d(12vw, -125vh, 0);
   }
 }
-.circle-container:nth-child(29) .circle {
+.fire-circle-container:nth-child(29) .fire-circle {
   animation-delay: 282ms;
 }
-.circle-container:nth-child(30) {
+.fire-circle-container:nth-child(30) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-30;
@@ -1261,10 +572,10 @@ a:hover {
     transform: translate3d(33vw, -136vh, 0);
   }
 }
-.circle-container:nth-child(30) .circle {
+.fire-circle-container:nth-child(30) .fire-circle {
   animation-delay: 344ms;
 }
-.circle-container:nth-child(31) {
+.fire-circle-container:nth-child(31) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-31;
@@ -1279,10 +590,10 @@ a:hover {
     transform: translate3d(84vw, -117vh, 0);
   }
 }
-.circle-container:nth-child(31) .circle {
+.fire-circle-container:nth-child(31) .fire-circle {
   animation-delay: 3623ms;
 }
-.circle-container:nth-child(32) {
+.fire-circle-container:nth-child(32) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-32;
@@ -1297,10 +608,10 @@ a:hover {
     transform: translate3d(8vw, -123vh, 0);
   }
 }
-.circle-container:nth-child(32) .circle {
+.fire-circle-container:nth-child(32) .fire-circle {
   animation-delay: 3174ms;
 }
-.circle-container:nth-child(33) {
+.fire-circle-container:nth-child(33) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-33;
@@ -1315,10 +626,10 @@ a:hover {
     transform: translate3d(44vw, -128vh, 0);
   }
 }
-.circle-container:nth-child(33) .circle {
+.fire-circle-container:nth-child(33) .fire-circle {
   animation-delay: 1082ms;
 }
-.circle-container:nth-child(34) {
+.fire-circle-container:nth-child(34) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-34;
@@ -1333,10 +644,10 @@ a:hover {
     transform: translate3d(58vw, -126vh, 0);
   }
 }
-.circle-container:nth-child(34) .circle {
+.fire-circle-container:nth-child(34) .fire-circle {
   animation-delay: 71ms;
 }
-.circle-container:nth-child(35) {
+.fire-circle-container:nth-child(35) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-35;
@@ -1351,10 +662,10 @@ a:hover {
     transform: translate3d(45vw, -118vh, 0);
   }
 }
-.circle-container:nth-child(35) .circle {
+.fire-circle-container:nth-child(35) .fire-circle {
   animation-delay: 1502ms;
 }
-.circle-container:nth-child(36) {
+.fire-circle-container:nth-child(36) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-36;
@@ -1369,10 +680,10 @@ a:hover {
     transform: translate3d(33vw, -113vh, 0);
   }
 }
-.circle-container:nth-child(36) .circle {
+.fire-circle-container:nth-child(36) .fire-circle {
   animation-delay: 3023ms;
 }
-.circle-container:nth-child(37) {
+.fire-circle-container:nth-child(37) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-37;
@@ -1387,10 +698,10 @@ a:hover {
     transform: translate3d(82vw, -108vh, 0);
   }
 }
-.circle-container:nth-child(37) .circle {
+.fire-circle-container:nth-child(37) .fire-circle {
   animation-delay: 816ms;
 }
-.circle-container:nth-child(38) {
+.fire-circle-container:nth-child(38) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-38;
@@ -1405,10 +716,10 @@ a:hover {
     transform: translate3d(87vw, -120vh, 0);
   }
 }
-.circle-container:nth-child(38) .circle {
+.fire-circle-container:nth-child(38) .fire-circle {
   animation-delay: 32ms;
 }
-.circle-container:nth-child(39) {
+.fire-circle-container:nth-child(39) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-39;
@@ -1423,10 +734,10 @@ a:hover {
     transform: translate3d(100vw, -132vh, 0);
   }
 }
-.circle-container:nth-child(39) .circle {
+.fire-circle-container:nth-child(39) .fire-circle {
   animation-delay: 2944ms;
 }
-.circle-container:nth-child(40) {
+.fire-circle-container:nth-child(40) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-40;
@@ -1441,10 +752,10 @@ a:hover {
     transform: translate3d(54vw, -125vh, 0);
   }
 }
-.circle-container:nth-child(40) .circle {
+.fire-circle-container:nth-child(40) .fire-circle {
   animation-delay: 3873ms;
 }
-.circle-container:nth-child(41) {
+.fire-circle-container:nth-child(41) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-41;
@@ -1459,10 +770,10 @@ a:hover {
     transform: translate3d(80vw, -133vh, 0);
   }
 }
-.circle-container:nth-child(41) .circle {
+.fire-circle-container:nth-child(41) .fire-circle {
   animation-delay: 2022ms;
 }
-.circle-container:nth-child(42) {
+.fire-circle-container:nth-child(42) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-42;
@@ -1477,10 +788,10 @@ a:hover {
     transform: translate3d(66vw, -113vh, 0);
   }
 }
-.circle-container:nth-child(42) .circle {
+.fire-circle-container:nth-child(42) .fire-circle {
   animation-delay: 798ms;
 }
-.circle-container:nth-child(43) {
+.fire-circle-container:nth-child(43) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-43;
@@ -1495,10 +806,10 @@ a:hover {
     transform: translate3d(44vw, -117vh, 0);
   }
 }
-.circle-container:nth-child(43) .circle {
+.fire-circle-container:nth-child(43) .fire-circle {
   animation-delay: 270ms;
 }
-.circle-container:nth-child(44) {
+.fire-circle-container:nth-child(44) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-44;
@@ -1513,10 +824,10 @@ a:hover {
     transform: translate3d(27vw, -135vh, 0);
   }
 }
-.circle-container:nth-child(44) .circle {
+.fire-circle-container:nth-child(44) .fire-circle {
   animation-delay: 3122ms;
 }
-.circle-container:nth-child(45) {
+.fire-circle-container:nth-child(45) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-45;
@@ -1531,10 +842,10 @@ a:hover {
     transform: translate3d(15vw, -112vh, 0);
   }
 }
-.circle-container:nth-child(45) .circle {
+.fire-circle-container:nth-child(45) .fire-circle {
   animation-delay: 2646ms;
 }
-.circle-container:nth-child(46) {
+.fire-circle-container:nth-child(46) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-46;
@@ -1549,10 +860,10 @@ a:hover {
     transform: translate3d(87vw, -112vh, 0);
   }
 }
-.circle-container:nth-child(46) .circle {
+.fire-circle-container:nth-child(46) .fire-circle {
   animation-delay: 2258ms;
 }
-.circle-container:nth-child(47) {
+.fire-circle-container:nth-child(47) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-47;
@@ -1567,10 +878,10 @@ a:hover {
     transform: translate3d(86vw, -133vh, 0);
   }
 }
-.circle-container:nth-child(47) .circle {
+.fire-circle-container:nth-child(47) .fire-circle {
   animation-delay: 1404ms;
 }
-.circle-container:nth-child(48) {
+.fire-circle-container:nth-child(48) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-48;
@@ -1585,10 +896,10 @@ a:hover {
     transform: translate3d(96vw, -129vh, 0);
   }
 }
-.circle-container:nth-child(48) .circle {
+.fire-circle-container:nth-child(48) .fire-circle {
   animation-delay: 2323ms;
 }
-.circle-container:nth-child(49) {
+.fire-circle-container:nth-child(49) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-49;
@@ -1603,10 +914,10 @@ a:hover {
     transform: translate3d(18vw, -120vh, 0);
   }
 }
-.circle-container:nth-child(49) .circle {
+.fire-circle-container:nth-child(49) .fire-circle {
   animation-delay: 3087ms;
 }
-.circle-container:nth-child(50) {
+.fire-circle-container:nth-child(50) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-50;
@@ -1621,10 +932,10 @@ a:hover {
     transform: translate3d(22vw, -120vh, 0);
   }
 }
-.circle-container:nth-child(50) .circle {
+.fire-circle-container:nth-child(50) .fire-circle {
   animation-delay: 2119ms;
 }
-.circle-container:nth-child(51) {
+.fire-circle-container:nth-child(51) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-51;
@@ -1639,10 +950,10 @@ a:hover {
     transform: translate3d(16vw, -120vh, 0);
   }
 }
-.circle-container:nth-child(51) .circle {
+.fire-circle-container:nth-child(51) .fire-circle {
   animation-delay: 2842ms;
 }
-.circle-container:nth-child(52) {
+.fire-circle-container:nth-child(52) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-52;
@@ -1657,10 +968,10 @@ a:hover {
     transform: translate3d(53vw, -103vh, 0);
   }
 }
-.circle-container:nth-child(52) .circle {
+.fire-circle-container:nth-child(52) .fire-circle {
   animation-delay: 3380ms;
 }
-.circle-container:nth-child(53) {
+.fire-circle-container:nth-child(53) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-53;
@@ -1675,10 +986,10 @@ a:hover {
     transform: translate3d(68vw, -113vh, 0);
   }
 }
-.circle-container:nth-child(53) .circle {
+.fire-circle-container:nth-child(53) .fire-circle {
   animation-delay: 76ms;
 }
-.circle-container:nth-child(54) {
+.fire-circle-container:nth-child(54) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-54;
@@ -1693,10 +1004,10 @@ a:hover {
     transform: translate3d(70vw, -138vh, 0);
   }
 }
-.circle-container:nth-child(54) .circle {
+.fire-circle-container:nth-child(54) .fire-circle {
   animation-delay: 3749ms;
 }
-.circle-container:nth-child(55) {
+.fire-circle-container:nth-child(55) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-55;
@@ -1711,10 +1022,10 @@ a:hover {
     transform: translate3d(98vw, -117vh, 0);
   }
 }
-.circle-container:nth-child(55) .circle {
+.fire-circle-container:nth-child(55) .fire-circle {
   animation-delay: 1735ms;
 }
-.circle-container:nth-child(56) {
+.fire-circle-container:nth-child(56) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-56;
@@ -1729,10 +1040,10 @@ a:hover {
     transform: translate3d(18vw, -110vh, 0);
   }
 }
-.circle-container:nth-child(56) .circle {
+.fire-circle-container:nth-child(56) .fire-circle {
   animation-delay: 2668ms;
 }
-.circle-container:nth-child(57) {
+.fire-circle-container:nth-child(57) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-57;
@@ -1747,10 +1058,10 @@ a:hover {
     transform: translate3d(65vw, -135vh, 0);
   }
 }
-.circle-container:nth-child(57) .circle {
+.fire-circle-container:nth-child(57) .fire-circle {
   animation-delay: 2161ms;
 }
-.circle-container:nth-child(58) {
+.fire-circle-container:nth-child(58) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-58;
@@ -1765,10 +1076,10 @@ a:hover {
     transform: translate3d(18vw, -131vh, 0);
   }
 }
-.circle-container:nth-child(58) .circle {
+.fire-circle-container:nth-child(58) .fire-circle {
   animation-delay: 2069ms;
 }
-.circle-container:nth-child(59) {
+.fire-circle-container:nth-child(59) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-59;
@@ -1783,10 +1094,10 @@ a:hover {
     transform: translate3d(3vw, -107vh, 0);
   }
 }
-.circle-container:nth-child(59) .circle {
+.fire-circle-container:nth-child(59) .fire-circle {
   animation-delay: 3147ms;
 }
-.circle-container:nth-child(60) {
+.fire-circle-container:nth-child(60) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-60;
@@ -1801,10 +1112,10 @@ a:hover {
     transform: translate3d(55vw, -127vh, 0);
   }
 }
-.circle-container:nth-child(60) .circle {
+.fire-circle-container:nth-child(60) .fire-circle {
   animation-delay: 3474ms;
 }
-.circle-container:nth-child(61) {
+.fire-circle-container:nth-child(61) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-61;
@@ -1819,10 +1130,10 @@ a:hover {
     transform: translate3d(46vw, -112vh, 0);
   }
 }
-.circle-container:nth-child(61) .circle {
+.fire-circle-container:nth-child(61) .fire-circle {
   animation-delay: 3118ms;
 }
-.circle-container:nth-child(62) {
+.fire-circle-container:nth-child(62) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-62;
@@ -1837,10 +1148,10 @@ a:hover {
     transform: translate3d(86vw, -116vh, 0);
   }
 }
-.circle-container:nth-child(62) .circle {
+.fire-circle-container:nth-child(62) .fire-circle {
   animation-delay: 314ms;
 }
-.circle-container:nth-child(63) {
+.fire-circle-container:nth-child(63) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-63;
@@ -1855,10 +1166,10 @@ a:hover {
     transform: translate3d(13vw, -108vh, 0);
   }
 }
-.circle-container:nth-child(63) .circle {
+.fire-circle-container:nth-child(63) .fire-circle {
   animation-delay: 2453ms;
 }
-.circle-container:nth-child(64) {
+.fire-circle-container:nth-child(64) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-64;
@@ -1873,10 +1184,10 @@ a:hover {
     transform: translate3d(55vw, -115vh, 0);
   }
 }
-.circle-container:nth-child(64) .circle {
+.fire-circle-container:nth-child(64) .fire-circle {
   animation-delay: 3441ms;
 }
-.circle-container:nth-child(65) {
+.fire-circle-container:nth-child(65) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-65;
@@ -1891,10 +1202,10 @@ a:hover {
     transform: translate3d(49vw, -125vh, 0);
   }
 }
-.circle-container:nth-child(65) .circle {
+.fire-circle-container:nth-child(65) .fire-circle {
   animation-delay: 3423ms;
 }
-.circle-container:nth-child(66) {
+.fire-circle-container:nth-child(66) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-66;
@@ -1909,10 +1220,10 @@ a:hover {
     transform: translate3d(61vw, -121vh, 0);
   }
 }
-.circle-container:nth-child(66) .circle {
+.fire-circle-container:nth-child(66) .fire-circle {
   animation-delay: 1982ms;
 }
-.circle-container:nth-child(67) {
+.fire-circle-container:nth-child(67) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-67;
@@ -1927,10 +1238,10 @@ a:hover {
     transform: translate3d(85vw, -133vh, 0);
   }
 }
-.circle-container:nth-child(67) .circle {
+.fire-circle-container:nth-child(67) .fire-circle {
   animation-delay: 587ms;
 }
-.circle-container:nth-child(68) {
+.fire-circle-container:nth-child(68) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-68;
@@ -1945,10 +1256,10 @@ a:hover {
     transform: translate3d(90vw, -117vh, 0);
   }
 }
-.circle-container:nth-child(68) .circle {
+.fire-circle-container:nth-child(68) .fire-circle {
   animation-delay: 2877ms;
 }
-.circle-container:nth-child(69) {
+.fire-circle-container:nth-child(69) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-69;
@@ -1963,10 +1274,10 @@ a:hover {
     transform: translate3d(8vw, -109vh, 0);
   }
 }
-.circle-container:nth-child(69) .circle {
+.fire-circle-container:nth-child(69) .fire-circle {
   animation-delay: 2111ms;
 }
-.circle-container:nth-child(70) {
+.fire-circle-container:nth-child(70) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-70;
@@ -1981,10 +1292,10 @@ a:hover {
     transform: translate3d(20vw, -128vh, 0);
   }
 }
-.circle-container:nth-child(70) .circle {
+.fire-circle-container:nth-child(70) .fire-circle {
   animation-delay: 117ms;
 }
-.circle-container:nth-child(71) {
+.fire-circle-container:nth-child(71) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-71;
@@ -1999,10 +1310,10 @@ a:hover {
     transform: translate3d(12vw, -131vh, 0);
   }
 }
-.circle-container:nth-child(71) .circle {
+.fire-circle-container:nth-child(71) .fire-circle {
   animation-delay: 1678ms;
 }
-.circle-container:nth-child(72) {
+.fire-circle-container:nth-child(72) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-72;
@@ -2017,10 +1328,10 @@ a:hover {
     transform: translate3d(46vw, -122vh, 0);
   }
 }
-.circle-container:nth-child(72) .circle {
+.fire-circle-container:nth-child(72) .fire-circle {
   animation-delay: 3607ms;
 }
-.circle-container:nth-child(73) {
+.fire-circle-container:nth-child(73) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-73;
@@ -2035,10 +1346,10 @@ a:hover {
     transform: translate3d(15vw, -113vh, 0);
   }
 }
-.circle-container:nth-child(73) .circle {
+.fire-circle-container:nth-child(73) .fire-circle {
   animation-delay: 2573ms;
 }
-.circle-container:nth-child(74) {
+.fire-circle-container:nth-child(74) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-74;
@@ -2053,10 +1364,10 @@ a:hover {
     transform: translate3d(63vw, -127vh, 0);
   }
 }
-.circle-container:nth-child(74) .circle {
+.fire-circle-container:nth-child(74) .fire-circle {
   animation-delay: 2595ms;
 }
-.circle-container:nth-child(75) {
+.fire-circle-container:nth-child(75) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-75;
@@ -2071,10 +1382,10 @@ a:hover {
     transform: translate3d(35vw, -114vh, 0);
   }
 }
-.circle-container:nth-child(75) .circle {
+.fire-circle-container:nth-child(75) .fire-circle {
   animation-delay: 3203ms;
 }
-.circle-container:nth-child(76) {
+.fire-circle-container:nth-child(76) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-76;
@@ -2089,10 +1400,10 @@ a:hover {
     transform: translate3d(55vw, -125vh, 0);
   }
 }
-.circle-container:nth-child(76) .circle {
+.fire-circle-container:nth-child(76) .fire-circle {
   animation-delay: 1158ms;
 }
-.circle-container:nth-child(77) {
+.fire-circle-container:nth-child(77) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-77;
@@ -2107,10 +1418,10 @@ a:hover {
     transform: translate3d(74vw, -102vh, 0);
   }
 }
-.circle-container:nth-child(77) .circle {
+.fire-circle-container:nth-child(77) .fire-circle {
   animation-delay: 822ms;
 }
-.circle-container:nth-child(78) {
+.fire-circle-container:nth-child(78) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-78;
@@ -2125,10 +1436,10 @@ a:hover {
     transform: translate3d(15vw, -119vh, 0);
   }
 }
-.circle-container:nth-child(78) .circle {
+.fire-circle-container:nth-child(78) .fire-circle {
   animation-delay: 1386ms;
 }
-.circle-container:nth-child(79) {
+.fire-circle-container:nth-child(79) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-79;
@@ -2143,10 +1454,10 @@ a:hover {
     transform: translate3d(100vw, -126vh, 0);
   }
 }
-.circle-container:nth-child(79) .circle {
+.fire-circle-container:nth-child(79) .fire-circle {
   animation-delay: 3610ms;
 }
-.circle-container:nth-child(80) {
+.fire-circle-container:nth-child(80) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-80;
@@ -2161,10 +1472,10 @@ a:hover {
     transform: translate3d(29vw, -121vh, 0);
   }
 }
-.circle-container:nth-child(80) .circle {
+.fire-circle-container:nth-child(80) .fire-circle {
   animation-delay: 3989ms;
 }
-.circle-container:nth-child(81) {
+.fire-circle-container:nth-child(81) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-81;
@@ -2179,10 +1490,10 @@ a:hover {
     transform: translate3d(89vw, -126vh, 0);
   }
 }
-.circle-container:nth-child(81) .circle {
+.fire-circle-container:nth-child(81) .fire-circle {
   animation-delay: 786ms;
 }
-.circle-container:nth-child(82) {
+.fire-circle-container:nth-child(82) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-82;
@@ -2197,10 +1508,10 @@ a:hover {
     transform: translate3d(43vw, -139vh, 0);
   }
 }
-.circle-container:nth-child(82) .circle {
+.fire-circle-container:nth-child(82) .fire-circle {
   animation-delay: 146ms;
 }
-.circle-container:nth-child(83) {
+.fire-circle-container:nth-child(83) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-83;
@@ -2215,10 +1526,10 @@ a:hover {
     transform: translate3d(64vw, -124vh, 0);
   }
 }
-.circle-container:nth-child(83) .circle {
+.fire-circle-container:nth-child(83) .fire-circle {
   animation-delay: 1136ms;
 }
-.circle-container:nth-child(84) {
+.fire-circle-container:nth-child(84) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-84;
@@ -2233,10 +1544,10 @@ a:hover {
     transform: translate3d(27vw, -107vh, 0);
   }
 }
-.circle-container:nth-child(84) .circle {
+.fire-circle-container:nth-child(84) .fire-circle {
   animation-delay: 2939ms;
 }
-.circle-container:nth-child(85) {
+.fire-circle-container:nth-child(85) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-85;
@@ -2251,10 +1562,10 @@ a:hover {
     transform: translate3d(7vw, -116vh, 0);
   }
 }
-.circle-container:nth-child(85) .circle {
+.fire-circle-container:nth-child(85) .fire-circle {
   animation-delay: 3819ms;
 }
-.circle-container:nth-child(86) {
+.fire-circle-container:nth-child(86) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-86;
@@ -2269,10 +1580,10 @@ a:hover {
     transform: translate3d(97vw, -115vh, 0);
   }
 }
-.circle-container:nth-child(86) .circle {
+.fire-circle-container:nth-child(86) .fire-circle {
   animation-delay: 3238ms;
 }
-.circle-container:nth-child(87) {
+.fire-circle-container:nth-child(87) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-87;
@@ -2287,10 +1598,10 @@ a:hover {
     transform: translate3d(95vw, -106vh, 0);
   }
 }
-.circle-container:nth-child(87) .circle {
+.fire-circle-container:nth-child(87) .fire-circle {
   animation-delay: 2207ms;
 }
-.circle-container:nth-child(88) {
+.fire-circle-container:nth-child(88) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-88;
@@ -2305,10 +1616,10 @@ a:hover {
     transform: translate3d(86vw, -133vh, 0);
   }
 }
-.circle-container:nth-child(88) .circle {
+.fire-circle-container:nth-child(88) .fire-circle {
   animation-delay: 3467ms;
 }
-.circle-container:nth-child(89) {
+.fire-circle-container:nth-child(89) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-89;
@@ -2323,10 +1634,10 @@ a:hover {
     transform: translate3d(44vw, -113vh, 0);
   }
 }
-.circle-container:nth-child(89) .circle {
+.fire-circle-container:nth-child(89) .fire-circle {
   animation-delay: 347ms;
 }
-.circle-container:nth-child(90) {
+.fire-circle-container:nth-child(90) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-90;
@@ -2341,10 +1652,10 @@ a:hover {
     transform: translate3d(50vw, -114vh, 0);
   }
 }
-.circle-container:nth-child(90) .circle {
+.fire-circle-container:nth-child(90) .fire-circle {
   animation-delay: 1285ms;
 }
-.circle-container:nth-child(91) {
+.fire-circle-container:nth-child(91) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-91;
@@ -2359,10 +1670,10 @@ a:hover {
     transform: translate3d(50vw, -117vh, 0);
   }
 }
-.circle-container:nth-child(91) .circle {
+.fire-circle-container:nth-child(91) .fire-circle {
   animation-delay: 585ms;
 }
-.circle-container:nth-child(92) {
+.fire-circle-container:nth-child(92) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-92;
@@ -2377,10 +1688,10 @@ a:hover {
     transform: translate3d(70vw, -135vh, 0);
   }
 }
-.circle-container:nth-child(92) .circle {
+.fire-circle-container:nth-child(92) .fire-circle {
   animation-delay: 978ms;
 }
-.circle-container:nth-child(93) {
+.fire-circle-container:nth-child(93) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-93;
@@ -2395,10 +1706,10 @@ a:hover {
     transform: translate3d(8vw, -115vh, 0);
   }
 }
-.circle-container:nth-child(93) .circle {
+.fire-circle-container:nth-child(93) .fire-circle {
   animation-delay: 2922ms;
 }
-.circle-container:nth-child(94) {
+.fire-circle-container:nth-child(94) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-94;
@@ -2413,10 +1724,10 @@ a:hover {
     transform: translate3d(64vw, -109vh, 0);
   }
 }
-.circle-container:nth-child(94) .circle {
+.fire-circle-container:nth-child(94) .fire-circle {
   animation-delay: 1643ms;
 }
-.circle-container:nth-child(95) {
+.fire-circle-container:nth-child(95) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-95;
@@ -2431,10 +1742,10 @@ a:hover {
     transform: translate3d(78vw, -131vh, 0);
   }
 }
-.circle-container:nth-child(95) .circle {
+.fire-circle-container:nth-child(95) .fire-circle {
   animation-delay: 2608ms;
 }
-.circle-container:nth-child(96) {
+.fire-circle-container:nth-child(96) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-96;
@@ -2449,10 +1760,10 @@ a:hover {
     transform: translate3d(75vw, -119vh, 0);
   }
 }
-.circle-container:nth-child(96) .circle {
+.fire-circle-container:nth-child(96) .fire-circle {
   animation-delay: 2970ms;
 }
-.circle-container:nth-child(97) {
+.fire-circle-container:nth-child(97) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-97;
@@ -2467,10 +1778,10 @@ a:hover {
     transform: translate3d(47vw, -103vh, 0);
   }
 }
-.circle-container:nth-child(97) .circle {
+.fire-circle-container:nth-child(97) .fire-circle {
   animation-delay: 1467ms;
 }
-.circle-container:nth-child(98) {
+.fire-circle-container:nth-child(98) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-98;
@@ -2485,10 +1796,10 @@ a:hover {
     transform: translate3d(39vw, -107vh, 0);
   }
 }
-.circle-container:nth-child(98) .circle {
+.fire-circle-container:nth-child(98) .fire-circle {
   animation-delay: 330ms;
 }
-.circle-container:nth-child(99) {
+.fire-circle-container:nth-child(99) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-99;
@@ -2503,10 +1814,10 @@ a:hover {
     transform: translate3d(43vw, -124vh, 0);
   }
 }
-.circle-container:nth-child(99) .circle {
+.fire-circle-container:nth-child(99) .fire-circle {
   animation-delay: 3148ms;
 }
-.circle-container:nth-child(100) {
+.fire-circle-container:nth-child(100) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-100;
@@ -2521,10 +1832,10 @@ a:hover {
     transform: translate3d(49vw, -130vh, 0);
   }
 }
-.circle-container:nth-child(100) .circle {
+.fire-circle-container:nth-child(100) .fire-circle {
   animation-delay: 2812ms;
 }
-.circle-container:nth-child(101) {
+.fire-circle-container:nth-child(101) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-101;
@@ -2539,10 +1850,10 @@ a:hover {
     transform: translate3d(93vw, -114vh, 0);
   }
 }
-.circle-container:nth-child(101) .circle {
+.fire-circle-container:nth-child(101) .fire-circle {
   animation-delay: 2718ms;
 }
-.circle-container:nth-child(102) {
+.fire-circle-container:nth-child(102) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-102;
@@ -2557,10 +1868,10 @@ a:hover {
     transform: translate3d(14vw, -108vh, 0);
   }
 }
-.circle-container:nth-child(102) .circle {
+.fire-circle-container:nth-child(102) .fire-circle {
   animation-delay: 2443ms;
 }
-.circle-container:nth-child(103) {
+.fire-circle-container:nth-child(103) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-103;
@@ -2575,10 +1886,10 @@ a:hover {
     transform: translate3d(99vw, -111vh, 0);
   }
 }
-.circle-container:nth-child(103) .circle {
+.fire-circle-container:nth-child(103) .fire-circle {
   animation-delay: 3803ms;
 }
-.circle-container:nth-child(104) {
+.fire-circle-container:nth-child(104) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-104;
@@ -2593,10 +1904,10 @@ a:hover {
     transform: translate3d(20vw, -115vh, 0);
   }
 }
-.circle-container:nth-child(104) .circle {
+.fire-circle-container:nth-child(104) .fire-circle {
   animation-delay: 2157ms;
 }
-.circle-container:nth-child(105) {
+.fire-circle-container:nth-child(105) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-105;
@@ -2611,10 +1922,10 @@ a:hover {
     transform: translate3d(86vw, -117vh, 0);
   }
 }
-.circle-container:nth-child(105) .circle {
+.fire-circle-container:nth-child(105) .fire-circle {
   animation-delay: 1473ms;
 }
-.circle-container:nth-child(106) {
+.fire-circle-container:nth-child(106) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-106;
@@ -2629,10 +1940,10 @@ a:hover {
     transform: translate3d(46vw, -112vh, 0);
   }
 }
-.circle-container:nth-child(106) .circle {
+.fire-circle-container:nth-child(106) .fire-circle {
   animation-delay: 411ms;
 }
-.circle-container:nth-child(107) {
+.fire-circle-container:nth-child(107) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-107;
@@ -2647,10 +1958,10 @@ a:hover {
     transform: translate3d(80vw, -132vh, 0);
   }
 }
-.circle-container:nth-child(107) .circle {
+.fire-circle-container:nth-child(107) .fire-circle {
   animation-delay: 608ms;
 }
-.circle-container:nth-child(108) {
+.fire-circle-container:nth-child(108) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-108;
@@ -2665,10 +1976,10 @@ a:hover {
     transform: translate3d(22vw, -130vh, 0);
   }
 }
-.circle-container:nth-child(108) .circle {
+.fire-circle-container:nth-child(108) .fire-circle {
   animation-delay: 1576ms;
 }
-.circle-container:nth-child(109) {
+.fire-circle-container:nth-child(109) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-109;
@@ -2683,10 +1994,10 @@ a:hover {
     transform: translate3d(93vw, -133vh, 0);
   }
 }
-.circle-container:nth-child(109) .circle {
+.fire-circle-container:nth-child(109) .fire-circle {
   animation-delay: 1937ms;
 }
-.circle-container:nth-child(110) {
+.fire-circle-container:nth-child(110) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-110;
@@ -2701,10 +2012,10 @@ a:hover {
     transform: translate3d(24vw, -114vh, 0);
   }
 }
-.circle-container:nth-child(110) .circle {
+.fire-circle-container:nth-child(110) .fire-circle {
   animation-delay: 1433ms;
 }
-.circle-container:nth-child(111) {
+.fire-circle-container:nth-child(111) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-111;
@@ -2719,10 +2030,10 @@ a:hover {
     transform: translate3d(72vw, -108vh, 0);
   }
 }
-.circle-container:nth-child(111) .circle {
+.fire-circle-container:nth-child(111) .fire-circle {
   animation-delay: a87e624ms;
 }
-.circle-container:nth-child(112) {
+.fire-circle-container:nth-child(112) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-112;
@@ -2737,10 +2048,10 @@ a:hover {
     transform: translate3d(52vw, -119vh, 0);
   }
 }
-.circle-container:nth-child(112) .circle {
+.fire-circle-container:nth-child(112) .fire-circle {
   animation-delay: 2744ms;
 }
-.circle-container:nth-child(113) {
+.fire-circle-container:nth-child(113) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-113;
@@ -2755,10 +2066,10 @@ a:hover {
     transform: translate3d(88vw, -128vh, 0);
   }
 }
-.circle-container:nth-child(113) .circle {
+.fire-circle-container:nth-child(113) .fire-circle {
   animation-delay: 2083ms;
 }
-.circle-container:nth-child(114) {
+.fire-circle-container:nth-child(114) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-114;
@@ -2773,10 +2084,10 @@ a:hover {
     transform: translate3d(68vw, -112vh, 0);
   }
 }
-.circle-container:nth-child(114) .circle {
+.fire-circle-container:nth-child(114) .fire-circle {
   animation-delay: 3350ms;
 }
-.circle-container:nth-child(115) {
+.fire-circle-container:nth-child(115) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-115;
@@ -2791,10 +2102,10 @@ a:hover {
     transform: translate3d(85vw, -126vh, 0);
   }
 }
-.circle-container:nth-child(115) .circle {
+.fire-circle-container:nth-child(115) .fire-circle {
   animation-delay: 2560ms;
 }
-.circle-container:nth-child(116) {
+.fire-circle-container:nth-child(116) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-116;
@@ -2809,10 +2120,10 @@ a:hover {
     transform: translate3d(1vw, -128vh, 0);
   }
 }
-.circle-container:nth-child(116) .circle {
+.fire-circle-container:nth-child(116) .fire-circle {
   animation-delay: 2057ms;
 }
-.circle-container:nth-child(117) {
+.fire-circle-container:nth-child(117) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-117;
@@ -2827,10 +2138,10 @@ a:hover {
     transform: translate3d(32vw, -129vh, 0);
   }
 }
-.circle-container:nth-child(117) .circle {
+.fire-circle-container:nth-child(117) .fire-circle {
   animation-delay: 3763ms;
 }
-.circle-container:nth-child(118) {
+.fire-circle-container:nth-child(118) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-118;
@@ -2845,10 +2156,10 @@ a:hover {
     transform: translate3d(98vw, -139vh, 0);
   }
 }
-.circle-container:nth-child(118) .circle {
+.fire-circle-container:nth-child(118) .fire-circle {
   animation-delay: 2571ms;
 }
-.circle-container:nth-child(119) {
+.fire-circle-container:nth-child(119) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-119;
@@ -2863,10 +2174,10 @@ a:hover {
     transform: translate3d(20vw, -131vh, 0);
   }
 }
-.circle-container:nth-child(119) .circle {
+.fire-circle-container:nth-child(119) .fire-circle {
   animation-delay: 3518ms;
 }
-.circle-container:nth-child(120) {
+.fire-circle-container:nth-child(120) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-120;
@@ -2881,10 +2192,10 @@ a:hover {
     transform: translate3d(88vw, -115vh, 0);
   }
 }
-.circle-container:nth-child(120) .circle {
+.fire-circle-container:nth-child(120) .fire-circle {
   animation-delay: 637ms;
 }
-.circle-container:nth-child(121) {
+.fire-circle-container:nth-child(121) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-121;
@@ -2899,10 +2210,10 @@ a:hover {
     transform: translate3d(36vw, -128vh, 0);
   }
 }
-.circle-container:nth-child(121) .circle {
+.fire-circle-container:nth-child(121) .fire-circle {
   animation-delay: 843ms;
 }
-.circle-container:nth-child(122) {
+.fire-circle-container:nth-child(122) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-122;
@@ -2917,10 +2228,10 @@ a:hover {
     transform: translate3d(1vw, -136vh, 0);
   }
 }
-.circle-container:nth-child(122) .circle {
+.fire-circle-container:nth-child(122) .fire-circle {
   animation-delay: 3095ms;
 }
-.circle-container:nth-child(123) {
+.fire-circle-container:nth-child(123) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-123;
@@ -2935,10 +2246,10 @@ a:hover {
     transform: translate3d(44vw, -116vh, 0);
   }
 }
-.circle-container:nth-child(123) .circle {
+.fire-circle-container:nth-child(123) .fire-circle {
   animation-delay: 3221ms;
 }
-.circle-container:nth-child(124) {
+.fire-circle-container:nth-child(124) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-124;
@@ -2953,10 +2264,10 @@ a:hover {
     transform: translate3d(41vw, -115vh, 0);
   }
 }
-.circle-container:nth-child(124) .circle {
+.fire-circle-container:nth-child(124) .fire-circle {
   animation-delay: 1715ms;
 }
-.circle-container:nth-child(125) {
+.fire-circle-container:nth-child(125) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-125;
@@ -2971,10 +2282,10 @@ a:hover {
     transform: translate3d(57vw, -109vh, 0);
   }
 }
-.circle-container:nth-child(125) .circle {
+.fire-circle-container:nth-child(125) .fire-circle {
   animation-delay: 1306ms;
 }
-.circle-container:nth-child(126) {
+.fire-circle-container:nth-child(126) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-126;
@@ -2989,10 +2300,10 @@ a:hover {
     transform: translate3d(86vw, -121vh, 0);
   }
 }
-.circle-container:nth-child(126) .circle {
+.fire-circle-container:nth-child(126) .fire-circle {
   animation-delay: 3440ms;
 }
-.circle-container:nth-child(127) {
+.fire-circle-container:nth-child(127) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-127;
@@ -3007,10 +2318,10 @@ a:hover {
     transform: translate3d(90vw, -126vh, 0);
   }
 }
-.circle-container:nth-child(127) .circle {
+.fire-circle-container:nth-child(127) .fire-circle {
   animation-delay: 3860ms;
 }
-.circle-container:nth-child(128) {
+.fire-circle-container:nth-child(128) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-128;
@@ -3025,10 +2336,10 @@ a:hover {
     transform: translate3d(29vw, -133vh, 0);
   }
 }
-.circle-container:nth-child(128) .circle {
+.fire-circle-container:nth-child(128) .fire-circle {
   animation-delay: 995ms;
 }
-.circle-container:nth-child(129) {
+.fire-circle-container:nth-child(129) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-129;
@@ -3043,10 +2354,10 @@ a:hover {
     transform: translate3d(29vw, -131vh, 0);
   }
 }
-.circle-container:nth-child(129) .circle {
+.fire-circle-container:nth-child(129) .fire-circle {
   animation-delay: 987ms;
 }
-.circle-container:nth-child(130) {
+.fire-circle-container:nth-child(130) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-130;
@@ -3061,10 +2372,10 @@ a:hover {
     transform: translate3d(5vw, -117vh, 0);
   }
 }
-.circle-container:nth-child(130) .circle {
+.fire-circle-container:nth-child(130) .fire-circle {
   animation-delay: 3322ms;
 }
-.circle-container:nth-child(131) {
+.fire-circle-container:nth-child(131) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-131;
@@ -3079,10 +2390,10 @@ a:hover {
     transform: translate3d(50vw, -131vh, 0);
   }
 }
-.circle-container:nth-child(131) .circle {
+.fire-circle-container:nth-child(131) .fire-circle {
   animation-delay: 1794ms;
 }
-.circle-container:nth-child(132) {
+.fire-circle-container:nth-child(132) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-132;
@@ -3097,10 +2408,10 @@ a:hover {
     transform: translate3d(16vw, -135vh, 0);
   }
 }
-.circle-container:nth-child(132) .circle {
+.fire-circle-container:nth-child(132) .fire-circle {
   animation-delay: 2174ms;
 }
-.circle-container:nth-child(133) {
+.fire-circle-container:nth-child(133) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-133;
@@ -3115,10 +2426,10 @@ a:hover {
     transform: translate3d(66vw, -134vh, 0);
   }
 }
-.circle-container:nth-child(133) .circle {
+.fire-circle-container:nth-child(133) .fire-circle {
   animation-delay: 207ms;
 }
-.circle-container:nth-child(134) {
+.fire-circle-container:nth-child(134) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-134;
@@ -3133,10 +2444,10 @@ a:hover {
     transform: translate3d(19vw, -104vh, 0);
   }
 }
-.circle-container:nth-child(134) .circle {
+.fire-circle-container:nth-child(134) .fire-circle {
   animation-delay: 879ms;
 }
-.circle-container:nth-child(135) {
+.fire-circle-container:nth-child(135) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-135;
@@ -3151,10 +2462,10 @@ a:hover {
     transform: translate3d(42vw, -122vh, 0);
   }
 }
-.circle-container:nth-child(135) .circle {
+.fire-circle-container:nth-child(135) .fire-circle {
   animation-delay: 1334ms;
 }
-.circle-container:nth-child(136) {
+.fire-circle-container:nth-child(136) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-136;
@@ -3169,10 +2480,10 @@ a:hover {
     transform: translate3d(23vw, -119vh, 0);
   }
 }
-.circle-container:nth-child(136) .circle {
+.fire-circle-container:nth-child(136) .fire-circle {
   animation-delay: 3042ms;
 }
-.circle-container:nth-child(137) {
+.fire-circle-container:nth-child(137) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-137;
@@ -3187,10 +2498,10 @@ a:hover {
     transform: translate3d(78vw, -119vh, 0);
   }
 }
-.circle-container:nth-child(137) .circle {
+.fire-circle-container:nth-child(137) .fire-circle {
   animation-delay: 75ms;
 }
-.circle-container:nth-child(138) {
+.fire-circle-container:nth-child(138) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-138;
@@ -3205,10 +2516,10 @@ a:hover {
     transform: translate3d(74vw, -127vh, 0);
   }
 }
-.circle-container:nth-child(138) .circle {
+.fire-circle-container:nth-child(138) .fire-circle {
   animation-delay: 1894ms;
 }
-.circle-container:nth-child(139) {
+.fire-circle-container:nth-child(139) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-139;
@@ -3223,10 +2534,10 @@ a:hover {
     transform: translate3d(55vw, -120vh, 0);
   }
 }
-.circle-container:nth-child(139) .circle {
+.fire-circle-container:nth-child(139) .fire-circle {
   animation-delay: 945ms;
 }
-.circle-container:nth-child(140) {
+.fire-circle-container:nth-child(140) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-140;
@@ -3241,10 +2552,10 @@ a:hover {
     transform: translate3d(16vw, -133vh, 0);
   }
 }
-.circle-container:nth-child(140) .circle {
+.fire-circle-container:nth-child(140) .fire-circle {
   animation-delay: 495ms;
 }
-.circle-container:nth-child(141) {
+.fire-circle-container:nth-child(141) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-141;
@@ -3259,10 +2570,10 @@ a:hover {
     transform: translate3d(54vw, -128vh, 0);
   }
 }
-.circle-container:nth-child(141) .circle {
+.fire-circle-container:nth-child(141) .fire-circle {
   animation-delay: 3620ms;
 }
-.circle-container:nth-child(142) {
+.fire-circle-container:nth-child(142) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-142;
@@ -3277,10 +2588,10 @@ a:hover {
     transform: translate3d(84vw, -130vh, 0);
   }
 }
-.circle-container:nth-child(142) .circle {
+.fire-circle-container:nth-child(142) .fire-circle {
   animation-delay: 951ms;
 }
-.circle-container:nth-child(143) {
+.fire-circle-container:nth-child(143) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-143;
@@ -3295,10 +2606,10 @@ a:hover {
     transform: translate3d(4vw, -122vh, 0);
   }
 }
-.circle-container:nth-child(143) .circle {
+.fire-circle-container:nth-child(143) .fire-circle {
   animation-delay: 1905ms;
 }
-.circle-container:nth-child(144) {
+.fire-circle-container:nth-child(144) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-144;
@@ -3313,10 +2624,10 @@ a:hover {
     transform: translate3d(67vw, -108vh, 0);
   }
 }
-.circle-container:nth-child(144) .circle {
+.fire-circle-container:nth-child(144) .fire-circle {
   animation-delay: 251ms;
 }
-.circle-container:nth-child(145) {
+.fire-circle-container:nth-child(145) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-145;
@@ -3331,10 +2642,10 @@ a:hover {
     transform: translate3d(20vw, -138vh, 0);
   }
 }
-.circle-container:nth-child(145) .circle {
+.fire-circle-container:nth-child(145) .fire-circle {
   animation-delay: 3447ms;
 }
-.circle-container:nth-child(146) {
+.fire-circle-container:nth-child(146) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-146;
@@ -3349,10 +2660,10 @@ a:hover {
     transform: translate3d(15vw, -112vh, 0);
   }
 }
-.circle-container:nth-child(146) .circle {
+.fire-circle-container:nth-child(146) .fire-circle {
   animation-delay: 1356ms;
 }
-.circle-container:nth-child(147) {
+.fire-circle-container:nth-child(147) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-147;
@@ -3367,10 +2678,10 @@ a:hover {
     transform: translate3d(20vw, -140vh, 0);
   }
 }
-.circle-container:nth-child(147) .circle {
+.fire-circle-container:nth-child(147) .fire-circle {
   animation-delay: 1342ms;
 }
-.circle-container:nth-child(148) {
+.fire-circle-container:nth-child(148) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-148;
@@ -3385,10 +2696,10 @@ a:hover {
     transform: translate3d(18vw, -117vh, 0);
   }
 }
-.circle-container:nth-child(148) .circle {
+.fire-circle-container:nth-child(148) .fire-circle {
   animation-delay: 2102ms;
 }
-.circle-container:nth-child(149) {
+.fire-circle-container:nth-child(149) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-149;
@@ -3403,10 +2714,10 @@ a:hover {
     transform: translate3d(18vw, -112vh, 0);
   }
 }
-.circle-container:nth-child(149) .circle {
+.fire-circle-container:nth-child(149) .fire-circle {
   animation-delay: 2792ms;
 }
-.circle-container:nth-child(150) {
+.fire-circle-container:nth-child(150) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-150;
@@ -3421,10 +2732,10 @@ a:hover {
     transform: translate3d(34vw, -119vh, 0);
   }
 }
-.circle-container:nth-child(150) .circle {
+.fire-circle-container:nth-child(150) .fire-circle {
   animation-delay: 3417ms;
 }
-.circle-container:nth-child(151) {
+.fire-circle-container:nth-child(151) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-151;
@@ -3439,10 +2750,10 @@ a:hover {
     transform: translate3d(70vw, -131vh, 0);
   }
 }
-.circle-container:nth-child(151) .circle {
+.fire-circle-container:nth-child(151) .fire-circle {
   animation-delay: 2251ms;
 }
-.circle-container:nth-child(152) {
+.fire-circle-container:nth-child(152) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-152;
@@ -3457,10 +2768,10 @@ a:hover {
     transform: translate3d(97vw, -105vh, 0);
   }
 }
-.circle-container:nth-child(152) .circle {
+.fire-circle-container:nth-child(152) .fire-circle {
   animation-delay: 1135ms;
 }
-.circle-container:nth-child(153) {
+.fire-circle-container:nth-child(153) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-153;
@@ -3475,10 +2786,10 @@ a:hover {
     transform: translate3d(44vw, -113vh, 0);
   }
 }
-.circle-container:nth-child(153) .circle {
+.fire-circle-container:nth-child(153) .fire-circle {
   animation-delay: 515ms;
 }
-.circle-container:nth-child(154) {
+.fire-circle-container:nth-child(154) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-154;
@@ -3493,10 +2804,10 @@ a:hover {
     transform: translate3d(1vw, -122vh, 0);
   }
 }
-.circle-container:nth-child(154) .circle {
+.fire-circle-container:nth-child(154) .fire-circle {
   animation-delay: 2945ms;
 }
-.circle-container:nth-child(155) {
+.fire-circle-container:nth-child(155) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-155;
@@ -3511,10 +2822,10 @@ a:hover {
     transform: translate3d(32vw, -126vh, 0);
   }
 }
-.circle-container:nth-child(155) .circle {
+.fire-circle-container:nth-child(155) .fire-circle {
   animation-delay: 1478ms;
 }
-.circle-container:nth-child(156) {
+.fire-circle-container:nth-child(156) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-156;
@@ -3529,10 +2840,10 @@ a:hover {
     transform: translate3d(39vw, -129vh, 0);
   }
 }
-.circle-container:nth-child(156) .circle {
+.fire-circle-container:nth-child(156) .fire-circle {
   animation-delay: 2741ms;
 }
-.circle-container:nth-child(157) {
+.fire-circle-container:nth-child(157) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-157;
@@ -3547,10 +2858,10 @@ a:hover {
     transform: translate3d(58vw, -106vh, 0);
   }
 }
-.circle-container:nth-child(157) .circle {
+.fire-circle-container:nth-child(157) .fire-circle {
   animation-delay: 2486ms;
 }
-.circle-container:nth-child(158) {
+.fire-circle-container:nth-child(158) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-158;
@@ -3565,10 +2876,10 @@ a:hover {
     transform: translate3d(32vw, -122vh, 0);
   }
 }
-.circle-container:nth-child(158) .circle {
+.fire-circle-container:nth-child(158) .fire-circle {
   animation-delay: 1828ms;
 }
-.circle-container:nth-child(159) {
+.fire-circle-container:nth-child(159) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-159;
@@ -3583,10 +2894,10 @@ a:hover {
     transform: translate3d(96vw, -107vh, 0);
   }
 }
-.circle-container:nth-child(159) .circle {
+.fire-circle-container:nth-child(159) .fire-circle {
   animation-delay: 332ms;
 }
-.circle-container:nth-child(160) {
+.fire-circle-container:nth-child(160) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-160;
@@ -3601,10 +2912,10 @@ a:hover {
     transform: translate3d(32vw, -104vh, 0);
   }
 }
-.circle-container:nth-child(160) .circle {
+.fire-circle-container:nth-child(160) .fire-circle {
   animation-delay: 3109ms;
 }
-.circle-container:nth-child(161) {
+.fire-circle-container:nth-child(161) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-161;
@@ -3619,10 +2930,10 @@ a:hover {
     transform: translate3d(17vw, -130vh, 0);
   }
 }
-.circle-container:nth-child(161) .circle {
+.fire-circle-container:nth-child(161) .fire-circle {
   animation-delay: 2603ms;
 }
-.circle-container:nth-child(162) {
+.fire-circle-container:nth-child(162) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-162;
@@ -3637,10 +2948,10 @@ a:hover {
     transform: translate3d(61vw, -131vh, 0);
   }
 }
-.circle-container:nth-child(162) .circle {
+.fire-circle-container:nth-child(162) .fire-circle {
   animation-delay: 1831ms;
 }
-.circle-container:nth-child(163) {
+.fire-circle-container:nth-child(163) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-163;
@@ -3655,10 +2966,10 @@ a:hover {
     transform: translate3d(12vw, -125vh, 0);
   }
 }
-.circle-container:nth-child(163) .circle {
+.fire-circle-container:nth-child(163) .fire-circle {
   animation-delay: 1011ms;
 }
-.circle-container:nth-child(164) {
+.fire-circle-container:nth-child(164) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-164;
@@ -3673,10 +2984,10 @@ a:hover {
     transform: translate3d(84vw, -118vh, 0);
   }
 }
-.circle-container:nth-child(164) .circle {
+.fire-circle-container:nth-child(164) .fire-circle {
   animation-delay: 102ms;
 }
-.circle-container:nth-child(165) {
+.fire-circle-container:nth-child(165) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-165;
@@ -3691,10 +3002,10 @@ a:hover {
     transform: translate3d(3vw, -107vh, 0);
   }
 }
-.circle-container:nth-child(165) .circle {
+.fire-circle-container:nth-child(165) .fire-circle {
   animation-delay: 2856ms;
 }
-.circle-container:nth-child(166) {
+.fire-circle-container:nth-child(166) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-166;
@@ -3709,10 +3020,10 @@ a:hover {
     transform: translate3d(80vw, -122vh, 0);
   }
 }
-.circle-container:nth-child(166) .circle {
+.fire-circle-container:nth-child(166) .fire-circle {
   animation-delay: 2046ms;
 }
-.circle-container:nth-child(167) {
+.fire-circle-container:nth-child(167) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-167;
@@ -3727,10 +3038,10 @@ a:hover {
     transform: translate3d(45vw, -110vh, 0);
   }
 }
-.circle-container:nth-child(167) .circle {
+.fire-circle-container:nth-child(167) .fire-circle {
   animation-delay: 1791ms;
 }
-.circle-container:nth-child(168) {
+.fire-circle-container:nth-child(168) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-168;
@@ -3745,10 +3056,10 @@ a:hover {
     transform: translate3d(12vw, -116vh, 0);
   }
 }
-.circle-container:nth-child(168) .circle {
+.fire-circle-container:nth-child(168) .fire-circle {
   animation-delay: 917ms;
 }
-.circle-container:nth-child(169) {
+.fire-circle-container:nth-child(169) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-169;
@@ -3763,10 +3074,10 @@ a:hover {
     transform: translate3d(11vw, -120vh, 0);
   }
 }
-.circle-container:nth-child(169) .circle {
+.fire-circle-container:nth-child(169) .fire-circle {
   animation-delay: 3437ms;
 }
-.circle-container:nth-child(170) {
+.fire-circle-container:nth-child(170) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-170;
@@ -3781,10 +3092,10 @@ a:hover {
     transform: translate3d(55vw, -115vh, 0);
   }
 }
-.circle-container:nth-child(170) .circle {
+.fire-circle-container:nth-child(170) .fire-circle {
   animation-delay: 2983ms;
 }
-.circle-container:nth-child(171) {
+.fire-circle-container:nth-child(171) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-171;
@@ -3799,10 +3110,10 @@ a:hover {
     transform: translate3d(85vw, -127vh, 0);
   }
 }
-.circle-container:nth-child(171) .circle {
+.fire-circle-container:nth-child(171) .fire-circle {
   animation-delay: 1778ms;
 }
-.circle-container:nth-child(172) {
+.fire-circle-container:nth-child(172) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-172;
@@ -3817,10 +3128,10 @@ a:hover {
     transform: translate3d(64vw, -127vh, 0);
   }
 }
-.circle-container:nth-child(172) .circle {
+.fire-circle-container:nth-child(172) .fire-circle {
   animation-delay: 700ms;
 }
-.circle-container:nth-child(173) {
+.fire-circle-container:nth-child(173) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-173;
@@ -3835,10 +3146,10 @@ a:hover {
     transform: translate3d(10vw, -126vh, 0);
   }
 }
-.circle-container:nth-child(173) .circle {
+.fire-circle-container:nth-child(173) .fire-circle {
   animation-delay: 284ms;
 }
-.circle-container:nth-child(174) {
+.fire-circle-container:nth-child(174) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-174;
@@ -3853,10 +3164,10 @@ a:hover {
     transform: translate3d(8vw, -131vh, 0);
   }
 }
-.circle-container:nth-child(174) .circle {
+.fire-circle-container:nth-child(174) .fire-circle {
   animation-delay: 329ms;
 }
-.circle-container:nth-child(175) {
+.fire-circle-container:nth-child(175) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-175;
@@ -3871,10 +3182,10 @@ a:hover {
     transform: translate3d(14vw, -104vh, 0);
   }
 }
-.circle-container:nth-child(175) .circle {
+.fire-circle-container:nth-child(175) .fire-circle {
   animation-delay: 3381ms;
 }
-.circle-container:nth-child(176) {
+.fire-circle-container:nth-child(176) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-176;
@@ -3889,10 +3200,10 @@ a:hover {
     transform: translate3d(30vw, -131vh, 0);
   }
 }
-.circle-container:nth-child(176) .circle {
+.fire-circle-container:nth-child(176) .fire-circle {
   animation-delay: 1117ms;
 }
-.circle-container:nth-child(177) {
+.fire-circle-container:nth-child(177) {
   width: 6px;
   height: 6px;
   animation-name: move-frames-177;
@@ -3907,10 +3218,10 @@ a:hover {
     transform: translate3d(66vw, -131vh, 0);
   }
 }
-.circle-container:nth-child(177) .circle {
+.fire-circle-container:nth-child(177) .fire-circle {
   animation-delay: 705ms;
 }
-.circle-container:nth-child(178) {
+.fire-circle-container:nth-child(178) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-178;
@@ -3925,10 +3236,10 @@ a:hover {
     transform: translate3d(71vw, -123vh, 0);
   }
 }
-.circle-container:nth-child(178) .circle {
+.fire-circle-container:nth-child(178) .fire-circle {
   animation-delay: 3080ms;
 }
-.circle-container:nth-child(179) {
+.fire-circle-container:nth-child(179) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-179;
@@ -3943,10 +3254,10 @@ a:hover {
     transform: translate3d(17vw, -127vh, 0);
   }
 }
-.circle-container:nth-child(179) .circle {
+.fire-circle-container:nth-child(179) .fire-circle {
   animation-delay: 3077ms;
 }
-.circle-container:nth-child(180) {
+.fire-circle-container:nth-child(180) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-180;
@@ -3961,10 +3272,10 @@ a:hover {
     transform: translate3d(36vw, -119vh, 0);
   }
 }
-.circle-container:nth-child(180) .circle {
+.fire-circle-container:nth-child(180) .fire-circle {
   animation-delay: 2443ms;
 }
-.circle-container:nth-child(181) {
+.fire-circle-container:nth-child(181) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-181;
@@ -3979,10 +3290,10 @@ a:hover {
     transform: translate3d(85vw, -111vh, 0);
   }
 }
-.circle-container:nth-child(181) .circle {
+.fire-circle-container:nth-child(181) .fire-circle {
   animation-delay: 3953ms;
 }
-.circle-container:nth-child(182) {
+.fire-circle-container:nth-child(182) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-182;
@@ -3997,10 +3308,10 @@ a:hover {
     transform: translate3d(86vw, -126vh, 0);
   }
 }
-.circle-container:nth-child(182) .circle {
+.fire-circle-container:nth-child(182) .fire-circle {
   animation-delay: 2583ms;
 }
-.circle-container:nth-child(183) {
+.fire-circle-container:nth-child(183) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-183;
@@ -4015,10 +3326,10 @@ a:hover {
     transform: translate3d(65vw, -107vh, 0);
   }
 }
-.circle-container:nth-child(183) .circle {
+.fire-circle-container:nth-child(183) .fire-circle {
   animation-delay: 680ms;
 }
-.circle-container:nth-child(184) {
+.fire-circle-container:nth-child(184) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-184;
@@ -4033,10 +3344,10 @@ a:hover {
     transform: translate3d(45vw, -110vh, 0);
   }
 }
-.circle-container:nth-child(184) .circle {
+.fire-circle-container:nth-child(184) .fire-circle {
   animation-delay: 2304ms;
 }
-.circle-container:nth-child(185) {
+.fire-circle-container:nth-child(185) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-185;
@@ -4051,10 +3362,10 @@ a:hover {
     transform: translate3d(27vw, -111vh, 0);
   }
 }
-.circle-container:nth-child(185) .circle {
+.fire-circle-container:nth-child(185) .fire-circle {
   animation-delay: 3666ms;
 }
-.circle-container:nth-child(186) {
+.fire-circle-container:nth-child(186) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-186;
@@ -4069,10 +3380,10 @@ a:hover {
     transform: translate3d(56vw, -136vh, 0);
   }
 }
-.circle-container:nth-child(186) .circle {
+.fire-circle-container:nth-child(186) .fire-circle {
   animation-delay: 2030ms;
 }
-.circle-container:nth-child(187) {
+.fire-circle-container:nth-child(187) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-187;
@@ -4087,10 +3398,10 @@ a:hover {
     transform: translate3d(66vw, -133vh, 0);
   }
 }
-.circle-container:nth-child(187) .circle {
+.fire-circle-container:nth-child(187) .fire-circle {
   animation-delay: 2986ms;
 }
-.circle-container:nth-child(188) {
+.fire-circle-container:nth-child(188) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-188;
@@ -4105,10 +3416,10 @@ a:hover {
     transform: translate3d(15vw, -107vh, 0);
   }
 }
-.circle-container:nth-child(188) .circle {
+.fire-circle-container:nth-child(188) .fire-circle {
   animation-delay: 1735ms;
 }
-.circle-container:nth-child(189) {
+.fire-circle-container:nth-child(189) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-189;
@@ -4123,10 +3434,10 @@ a:hover {
     transform: translate3d(51vw, -130vh, 0);
   }
 }
-.circle-container:nth-child(189) .circle {
+.fire-circle-container:nth-child(189) .fire-circle {
   animation-delay: 2277ms;
 }
-.circle-container:nth-child(190) {
+.fire-circle-container:nth-child(190) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-190;
@@ -4141,10 +3452,10 @@ a:hover {
     transform: translate3d(93vw, -130vh, 0);
   }
 }
-.circle-container:nth-child(190) .circle {
+.fire-circle-container:nth-child(190) .fire-circle {
   animation-delay: 2712ms;
 }
-.circle-container:nth-child(191) {
+.fire-circle-container:nth-child(191) {
   width: 4px;
   height: 4px;
   animation-name: move-frames-191;
@@ -4159,10 +3470,10 @@ a:hover {
     transform: translate3d(27vw, -121vh, 0);
   }
 }
-.circle-container:nth-child(191) .circle {
+.fire-circle-container:nth-child(191) .fire-circle {
   animation-delay: 400ms;
 }
-.circle-container:nth-child(192) {
+.fire-circle-container:nth-child(192) {
   width: 3px;
   height: 3px;
   animation-name: move-frames-192;
@@ -4177,10 +3488,10 @@ a:hover {
     transform: translate3d(58vw, -120vh, 0);
   }
 }
-.circle-container:nth-child(192) .circle {
+.fire-circle-container:nth-child(192) .fire-circle {
   animation-delay: 3706ms;
 }
-.circle-container:nth-child(193) {
+.fire-circle-container:nth-child(193) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-193;
@@ -4195,10 +3506,10 @@ a:hover {
     transform: translate3d(33vw, -109vh, 0);
   }
 }
-.circle-container:nth-child(193) .circle {
+.fire-circle-container:nth-child(193) .fire-circle {
   animation-delay: 2407ms;
 }
-.circle-container:nth-child(194) {
+.fire-circle-container:nth-child(194) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-194;
@@ -4213,10 +3524,10 @@ a:hover {
     transform: translate3d(77vw, -112vh, 0);
   }
 }
-.circle-container:nth-child(194) .circle {
+.fire-circle-container:nth-child(194) .fire-circle {
   animation-delay: 1810ms;
 }
-.circle-container:nth-child(195) {
+.fire-circle-container:nth-child(195) {
   width: 7px;
   height: 7px;
   animation-name: move-frames-195;
@@ -4231,10 +3542,10 @@ a:hover {
     transform: translate3d(64vw, -114vh, 0);
   }
 }
-.circle-container:nth-child(195) .circle {
+.fire-circle-container:nth-child(195) .fire-circle {
   animation-delay: 448ms;
 }
-.circle-container:nth-child(196) {
+.fire-circle-container:nth-child(196) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-196;
@@ -4249,10 +3560,10 @@ a:hover {
     transform: translate3d(37vw, -130vh, 0);
   }
 }
-.circle-container:nth-child(196) .circle {
+.fire-circle-container:nth-child(196) .fire-circle {
   animation-delay: 1648ms;
 }
-.circle-container:nth-child(197) {
+.fire-circle-container:nth-child(197) {
   width: 2px;
   height: 2px;
   animation-name: move-frames-197;
@@ -4267,10 +3578,10 @@ a:hover {
     transform: translate3d(50vw, -119vh, 0);
   }
 }
-.circle-container:nth-child(197) .circle {
+.fire-circle-container:nth-child(197) .fire-circle {
   animation-delay: 2075ms;
 }
-.circle-container:nth-child(198) {
+.fire-circle-container:nth-child(198) {
   width: 1px;
   height: 1px;
   animation-name: move-frames-198;
@@ -4285,10 +3596,10 @@ a:hover {
     transform: translate3d(73vw, -136vh, 0);
   }
 }
-.circle-container:nth-child(198) .circle {
+.fire-circle-container:nth-child(198) .fire-circle {
   animation-delay: 197ms;
 }
-.circle-container:nth-child(199) {
+.fire-circle-container:nth-child(199) {
   width: 5px;
   height: 5px;
   animation-name: move-frames-199;
@@ -4303,10 +3614,10 @@ a:hover {
     transform: translate3d(64vw, -129vh, 0);
   }
 }
-.circle-container:nth-child(199) .circle {
+.fire-circle-container:nth-child(199) .fire-circle {
   animation-delay: 2024ms;
 }
-.circle-container:nth-child(200) {
+.fire-circle-container:nth-child(200) {
   width: 8px;
   height: 8px;
   animation-name: move-frames-200;
@@ -4321,125 +3632,6 @@ a:hover {
     transform: translate3d(28vw, -125vh, 0);
   }
 }
-.circle-container:nth-child(200) .circle {
+.fire-circle-container:nth-child(200) .fire-circle {
   animation-delay: 1670ms;
-}
-
-.message {
-  position: absolute;
-  right: 20px;
-  bottom: 10px;
-  color: white;
-  font-family: "Josefin Slab", serif;
-  line-height: 27px;
-  font-size: 18px;
-  text-align: right;
-  pointer-events: none;
-  animation: message-frames 1.5s ease 5s forwards;
-  opacity: 0;
-}
-@keyframes message-frames {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.tower-backlight {
-  animation: glow-svg 1s ease-in-out infinite alternate;
-}
-
-.notepad-container {
-  width: 100%;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 30px 50px 30px;
-}
-
-.notepad {
-  width: 80%;
-  max-width: 600px;
-  box-shadow: 10px 10px 40px rgba(black, .15);
-  border-radius: 0 0 10px 10px;
-  overflow-x: hidden;
-}
-
-.top {
-  width: 100%;
-  height: 50px;
-  background: #561e0b;
-  border-radius: 5px 5px 0 0;
-}
-
-.paper-container {
-  height: 100%;
-  max-height: 77vh;
-  overflow: scroll;
-}
-
-.paper {
-  height: 100%;
-  padding: 35px 20px;
-  background: repeating-linear-gradient(#f6eee3, #f6eee3 31px, #94ACD4 31px, #94ACD4 32px);
-  font-family: "Rock Salt", cursive;
-  line-height: 32px;
-  outline: 0;
-  font-size: 22px;
-  color: darkblue;
-}
-
-.megaphone-backlight {
-  height: 100%;
-  padding-top: 15px;
-  padding-right: 15px;
-  animation: glow-svg 1s ease-in-out infinite alternate;
-}
-
-.paper-end a {
-  font-size: 35px;
-  color: darkblue;
-  text-decoration: underline;
-  display: flex;
-  justify-content: center;
-}
-
-.plane-container {
-  position: fixed;
-	top: 0;
-	left: 0;
-	height: 100vh;
-	width: 100%;
-}
-
-.plane {
-  height: 25vh;
-  transform: translateX(-50vw) translateY(-50vh);
-  animation: diagonal-to-bottom-right 5s linear 0s ;
-}
-
-@keyframes diagonal-to-bottom-right {
-  from {
-    transform: translateX(-15vw) translateY(-15vh);
-  }
-
-  to {
-    transform: translateX(103vw) translateY(103vh);
-  }
-}
-
-
-#passage-debrief3{
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
-
-.right-dice{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 27vw;
 }
